@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>10TV | Mega Transmisión</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="ui-show">
+
+<div id="splash">
+    <div class="splash-content">
+        <h1 class="splash-logo">10TV</h1>
+        <div class="loader"></div>
+        <p>Cargando Sistema Smart...</p>
+    </div>
+</div>
+
+<div id="main-stage">
+    <video id="player" playsinline></video>
+    <iframe id="yt-player" allow="autoplay; encrypted-media; fullscreen"></iframe>
+    
+    <div id="hud">
+        <div class="top-bar"><div class="logo">10TV</div></div>
+        <div class="bottom-info">
+            <h1 class="ch-display" id="ch-title">Cargando...</h1>
+            <p class="ch-desc" id="ch-desc">Selecciona un canal en la guía.</p>
+        </div>
+    </div>
+
+    <div id="guide">
+        <div class="guide-layout">
+            <div class="side-menu" id="category-list">
+                </div>
+            <div class="main-list">
+                <div id="channel-list">
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="extra-modal" class="modal-overlay">
+    <div class="modal-card">
+        <h3>COMUNIDAD 10TV</h3>
+        <div class="modal-grid">
+            <div class="qr-section">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://t.me/TuCanal" alt="Telegram QR">
+                <p>TELEGRAM</p>
+            </div>
+            <div class="donacion-section">
+                <i class="fas fa-hand-holding-usd fa-3x" style="color:var(--accent)"></i>
+                <p>DONACIONES</p>
+                <div class="btn-donar">MERCADO PAGO / PAYPAL</div>
+            </div>
+        </div>
+        <p style="font-size:0.8rem; opacity:0.5">Presiona CUALQUIER FLECHA para salir</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

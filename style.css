@@ -1,0 +1,44 @@
+:root { --accent: #E50914; --panel: rgba(10, 10, 10, 0.98); }
+* { box-sizing: border-box; outline: none; }
+body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: #000; color: #fff; font-family: 'Inter', sans-serif; overflow: hidden; }
+
+/* Splash */
+#splash { position: fixed; inset: 0; background: #000; z-index: 9999; display: flex; align-items: center; justify-content: center; text-align: center; transition: 0.8s; }
+.splash-logo { font-size: 5rem; color: var(--accent); margin-bottom: 0; }
+.loader { width: 100px; height: 4px; background: #222; margin: 20px auto; position: relative; overflow: hidden; }
+.loader::after { content: ''; position: absolute; width: 40%; height: 100%; background: var(--accent); animation: l 1.5s infinite; }
+@keyframes l { 0% { left: -40%; } 100% { left: 100%; } }
+
+/* Layout Guía */
+#guide { position: absolute; right: -820px; top: 0; width: 800px; height: 100%; background: var(--panel); z-index: 100; transition: 0.5s cubic-bezier(0.1, 0.7, 0.1, 1); border-left: 3px solid var(--accent); }
+#guide.active { transform: translateX(-100%); }
+.guide-layout { display: flex; height: 100%; }
+
+/* Submenús (Categorías) */
+.side-menu { width: 250px; background: rgba(0,0,0,0.3); padding: 40px 10px; border-right: 1px solid rgba(255,255,255,0.05); }
+.cat-item { padding: 15px 20px; font-weight: 700; opacity: 0.5; transition: 0.3s; cursor: pointer; border-radius: 8px; margin-bottom: 5px; font-size: 0.9rem; }
+.cat-item.focused { opacity: 1; background: rgba(255,255,255,0.1); border-left: 4px solid var(--accent); }
+.cat-item.selected { opacity: 1; color: var(--accent); }
+
+/* Lista de Canales */
+.main-list { flex: 1; padding: 40px 20px; overflow-y: auto; }
+.card { 
+    display: flex; align-items: center; gap: 15px; padding: 12px; 
+    background: rgba(255,255,255,0.03); border-radius: 10px; margin-bottom: 10px;
+    border: 2px solid transparent; transition: 0.2s;
+}
+.card.focused { border-color: var(--accent); background: rgba(255,255,255,0.1); transform: translateX(10px); }
+.card.active-channel { background: var(--accent) !important; }
+.ch-logo { width: 40px; height: 40px; object-fit: contain; background: #fff; border-radius: 4px; }
+
+/* HUD y Modales */
+#hud { position: absolute; inset: 0; z-index: 10; background: linear-gradient(0deg, rgba(0,0,0,0.9), transparent); opacity: 0; transition: 0.5s; pointer-events: none; }
+.ui-show #hud { opacity: 1; }
+.bottom-info { position: absolute; bottom: 50px; left: 50px; }
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 2000; display: none; align-items: center; justify-content: center; }
+.modal-overlay.active { display: flex; }
+.modal-card { text-align: center; padding: 40px; border: 1px solid var(--accent); border-radius: 20px; }
+.modal-grid { display: flex; gap: 50px; margin: 30px 0; }
+.btn-donar { background: var(--accent); padding: 10px; border-radius: 5px; font-weight: bold; margin-top: 15px; }
+
+#player, #yt-player { position: absolute; inset: 0; width: 100%; height: 100%; display: none; }
