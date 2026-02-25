@@ -1,5 +1,5 @@
 /**
- * 10TV - VERSIÓN RESTAURADA Y LIMPIA
+ * 10TV - VERSIÓN RESTAURADA Y AMPLIADA
  * YouTube + VIP + Global + Nueva Lista Mundo/Deportes
  */
 
@@ -14,10 +14,22 @@ const categorias = {
         { name: "A12 (LUZU)", id: "JrmCaXL5GZs", type: "yt", logo: "https://via.placeholder.com/50?text=LUZU" },
         { name: "OLGA", id: "oITT9sjzUG4", type: "yt", logo: "https://via.placeholder.com/50?text=OLGA" },
         { name: "CANAL 26", id: "c8Uxc6pwDNA", type: "yt", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Canal_26_logo.png" },
-        { name: "QUIERO MUSICA", id: "vGNglKWqwcQ", type: "yt", logo: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Quiero_m%C3%BAsica_en_mi_idioma.png" }
+        { name: "QUIERO MUSICA", id: "vGNglKWqwcQ", type: "yt", logo: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Quiero_m%C3%BAsica_en_mi_idioma.png" },
+        // --- AGREGADOS STREAMING ---
+        // Para YouTube: tomamos el código después de 'v=' o el final de la URL corta.
+        { name: "RADIO RIVADAVIA", id: "r0Zla29fWNg", type: "yt", logo: "https://via.placeholder.com/50?text=RIVADAVIA" },
+        { name: "LA POP", id: "7IGgrPGetoI", type: "yt", logo: "https://via.placeholder.com/50?text=LA+POP" }
+    ],
+    "24/7": [
+        // --- NUEVA CATEGORÍA 24/7 ---
+        { name: "EL CHAVO", id: "fy_fYd3ZwPE", type: "yt", logo: "https://via.placeholder.com/50?text=CHAVO" },
+        { name: "MASHA Y EL OSO", id: "8ZTe5n_SFfg", type: "yt", logo: "https://via.placeholder.com/50?text=MASHA" },
+        { name: "CASO CERRADO", id: "CG7UYN5OrQA", type: "yt", logo: "https://via.placeholder.com/50?text=CASO+C" }
     ],
     "MUNDO Y DEPORTES": [
         { name: "TYC SPORTS PLAY", url: "https://d320m3arb2wo8b.cloudfront.net/out/v1/34e0da501a8c4489b713809eb08a9bf3/index.m3u8", type: "m3u8" },
+        // --- AGREGADO DEPORTES YT ---
+        { name: "DEPORTES 24/7", id: "2emmODLYuic", type: "yt", logo: "https://via.placeholder.com/50?text=DEPOR" },
         { name: "IMAGEN TV", url: "http://181.78.105.146:2000/play/a00h/index.m3u8", type: "m3u8" },
         { name: "MVS MÉXICO", url: "https://dish.akamaized.net/Content/HLS_HLS_CLR/Live/channel(mvs)/variant.m3u8", type: "m3u8" },
         { name: "SKY SPORTS", url: "https://sdmx.vip:443/belpley/sYqKZQrTZa/2092605", type: "m3u8" },
@@ -38,9 +50,15 @@ const categorias = {
         { name: "EL TRECE", url: "http://ar.watcha.live/ch7/hi.m3u8", type: "m3u8" }
     ],
     "GLOBAL TV": [
-        { name: "Argentina", code: "ar" }, { name: "España", code: "es" }, { name: "México", code: "mx" }, { name: "Chile", code: "cl" }
+        { name: "Argentina", code: "ar" }, 
+        { name: "España", code: "es" }, 
+        { name: "México", code: "mx" }, 
+        { name: "Chile", code: "cl" },
+        { name: "Paraguay", code: "py" } // <-- AGREGADO PARAGUAY
     ]
 };
+
+// ... Resto del código (init, loadChannels, playChannel, etc.) se mantiene igual ...
 
 let currentSection = "categories"; 
 let selectedCatIndex = 0;
@@ -93,7 +111,7 @@ async function loadChannels(catName) {
             `;
             div.onclick = () => fetchGlobalM3U(item.code);
         } else {
-            const logo = item.logo || 'https://via.placeholder.com/80/222/fff?text=TV';
+            const logo = item.logo || 'https://via.placeholder.com/50?text=TV';
             div.innerHTML = `
                 <img src="${logo}" class="ch-logo" onerror="this.src='https://via.placeholder.com/50?text=TV'">
                 <div class="card-content"><div class="title">${item.name}</div></div>
