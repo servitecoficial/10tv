@@ -1,0 +1,38 @@
+/* --- MODOS DE CLÍMAX (AMBIENTES) --- */
+
+/* 1. MODO PAREJA (Tonos Rosas/Pasión) */
+body.climax-pareja {
+    --accent: #ff4d6d;
+    --glow: rgba(255, 77, 109, 0.6);
+}
+body.climax-pareja #side-panel {
+    background: rgba(40, 0, 10, 0.7); /* Fondo ligeramente rojizo */
+}
+
+/* 2. MODO AMIGOS / TRIBUNA (Verde Estadio/Energía) */
+body.climax-amigos {
+    --accent: #00d1b2;
+    --glow: rgba(0, 209, 178, 0.6);
+}
+body.climax-amigos #side-panel {
+    background: rgba(0, 20, 20, 0.7); /* Fondo azulado/verdoso */
+}
+
+/* 3. MODO CINE (Ultra Minimalista) */
+body.climax-cine {
+    --accent: #ffffff; /* Blanco puro para contraste sobre negro */
+    --glow: rgba(255, 255, 255, 0.2);
+}
+body.climax-cine #side-panel {
+    background: rgba(0, 0, 0, 0.9); /* Casi opaco para evitar distracciones */
+    backdrop-filter: blur(40px);
+}
+body.climax-cine .dragon-glow::before {
+    background: conic-gradient(transparent, transparent, #fff, transparent);
+}
+
+/* 4. MODO VIP / GOLD (Opcional - Dorado) */
+body.climax-vip {
+    --accent: #ffd700;
+    --glow: rgba(255, 215, 0, 0.6);
+}

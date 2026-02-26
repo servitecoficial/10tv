@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10TV Premium</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="splash">
+    <div class="dragon-glow"></div> 
+    <div class="splash-content">
+        <div class="splash-logo">
+            <img src="files/logo.png" alt="Logo">
+        </div>
+        <div class="loader-vip"></div>
+        <p class="loading-msg" style="letter-spacing: 5px; font-weight: bold;">SISTEMA PREMIUM ACTIVADO</p>
+    </div>
+</div>
+
+<div id="main-stage">
+    <video id="player" playsinline></video>
+    <iframe id="yt-player" allow="autoplay; encrypted-media"></iframe>
+    
+    <div id="loading-overlay">
+        <img src="files/carga.png" class="bg-loading" alt="Cargando Fondo">
+        <div class="loader-container">
+            <div class="loader-vip"></div>
+            <p style="color:white; letter-spacing:3px; font-weight:bold; text-shadow: 2px 2px 4px #000;">CARGANDO SEÑAL...</p>
+        </div>
+    </div>
+
+    <div id="hud">
+        <img id="hud-logo" src="" alt="Logo Canal">
+        <div class="hud-text">
+            <h1 id="ch-title">10TV</h1>
+        </div>
+    </div>
+
+    <div id="guide">
+        <div class="guide-layout">
+            <div class="side-menu" id="category-list"></div>
+            <div class="main-list" id="channel-list"></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/channels.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

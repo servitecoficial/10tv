@@ -1,0 +1,72 @@
+/* --- TECLADO VIRTUAL PROPIO (MINIMALISTA) --- */
+
+#custom-keyboard {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 200;
+    transition: transform 0.3s ease;
+}
+
+/* Filas de teclas */
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Estilo de cada tecla */
+.key {
+    flex: 1;
+    max-width: 40px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+/* Teclas especiales (Borrar, Enter, Espacio) */
+.key.wide {
+    flex: 2;
+    max-width: 80px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.key.space {
+    flex: 4;
+    max-width: 200px;
+}
+
+/* ESTADO EN FOCO (Cuando navegas con el control) */
+.key.focused {
+    background: var(--accent);
+    color: #fff;
+    border-color: #fff;
+    transform: scale(1.15);
+    box-shadow: 0 0 20px var(--glow);
+    z-index: 10;
+}
+
+/* Animación de pulsación */
+.key:active {
+    transform: scale(0.95);
+    background: #fff;
+    color: #000;
+}
+
+/* Letras y números */
+.key-text {
+    text-transform: uppercase;
+}

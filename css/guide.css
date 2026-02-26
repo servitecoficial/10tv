@@ -1,0 +1,106 @@
+/* --- CONFIGURACIÓN DE LA GUÍA DE CANALES --- */
+
+#guide { 
+    position: absolute; 
+    right: -820px; /* Escondido por defecto */
+    top: 0; 
+    width: 800px; 
+    height: 100%; 
+    background: rgba(10, 10, 10, 0.85); 
+    backdrop-filter: blur(20px); /* Efecto cristal esmerilado */
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67); 
+    z-index: 100; 
+}
+
+#guide.active { 
+    right: 0; 
+}
+
+.guide-layout { 
+    display: flex; 
+    height: 100%; 
+}
+
+/* Menú Lateral de Categorías */
+.side-menu { 
+    width: 250px; 
+    padding: 40px 20px; 
+    background: rgba(0, 0, 0, 0.3); 
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cat-item { 
+    padding: 18px; 
+    margin-bottom: 5px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.4; 
+    transition: 0.3s;
+    cursor: pointer; 
+}
+
+.cat-item.focused { 
+    opacity: 1; 
+    color: #fff; 
+    background: var(--accent); 
+    box-shadow: 0 0 20px var(--glow);
+    transform: translateX(10px);
+}
+
+/* Lista Principal de Canales */
+.main-list { 
+    flex: 1; 
+    padding: 40px; 
+    overflow-y: auto; 
+    scrollbar-width: none; /* Oculta scroll en Firefox */
+}
+
+.main-list::-webkit-scrollbar { 
+    display: none; /* Oculta scroll en Chrome/TV */
+}
+
+.card { 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+    padding: 15px; 
+    margin-bottom: 12px; 
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 2px solid transparent; 
+    transition: 0.3s;
+}
+
+.card.focused { 
+    border-color: var(--accent); 
+    background: rgba(255, 255, 255, 0.1); 
+    transform: scale(1.02); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.ch-logo { 
+    width: 60px; 
+    height: 60px; 
+    object-fit: contain; 
+    background: #000;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.ch-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.ch-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.ch-display {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
