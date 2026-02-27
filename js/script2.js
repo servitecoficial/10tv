@@ -1,18 +1,12 @@
-/**
- * 10TV PREMIUM - JS ENGINE OPTIMIZADO PARA ANDROID APK
- */
-
 let hls = new Hls();
 let currentSection = "categories";
 let selectedCatIndex = 0;
 let selectedChIndex = 0;
-let savedCountryIndex = 0; 
 let isMenuOpen = false;
 let currentList = [];
 let isInsideCountry = false;
-let abortController = null;
-let timer; // Para pulsación larga
-const LONG_PRESS_MS = 800; 
+let timer;
+const LONG_PRESS_MS = 800;
 
 // --- GESTIÓN DE FAVORITOS ---
 const FavoritesManager = {
@@ -26,38 +20,27 @@ const FavoritesManager = {
     toggle(channel) {
         let favs = this.load();
         const index = favs.findIndex(f => f.name === channel.name);
-        if (index > -1) {
-            favs.splice(index, 1);
-        } else {
-            favs.push({
-                name: channel.name,
-                url: channel.url || null,
-                id: channel.id || null,
-                type: channel.type,
-                logo: channel.logo || null
-            });
-        }
+        if (index > -1) favs.splice(index, 1);
+        else favs.push({ name: channel.name, url: channel.url, id: channel.id, type: channel.type, logo: channel.logo });
         this.save(favs);
         return favs;
     },
-    isFavorite(name) {
-        return this.load().some(f => f.name === name);
-    }
+    isFavorite(name) { return this.load().some(f => f.name === name); }
 };
 
 // --- INICIALIZACIÓN ---
 function init() {
     renderCategories();
     updateChannelList();
-
-    // Splash Control: Aseguramos que se quite pase lo que pase
+    
+    // Quitar Splash automáticamente
     setTimeout(() => {
         const sp = document.getElementById('splash');
         if(sp) {
             sp.style.opacity = '0';
             setTimeout(() => { 
                 sp.style.display = 'none'; 
-                // Auto-reproducir primer canal de la lista inicial
+                // Arrancar el primer canal al inicio
                 if(currentList.length > 0) playChannel(currentList[0]);
             }, 800);
         }
@@ -66,7 +49,7 @@ function init() {
     setupControls();
 }
 
-// --- LOGICA DE VIDEO (CON FIX DE SONIDO PARA APK) ---
+// --- REPRODUCTOR (FIX LOGO PLAY TRABADO) ---
 function playChannel(ch) {
     if(!ch || ch.isCountry) return;
     
@@ -79,69 +62,73 @@ function playChannel(ch) {
     if(loader) loader.style.display = 'flex';
     if(chTitle) chTitle.innerText = ch.name;
     
-    // Logo de respaldo si no hay uno definido
     const fallback = `https://ui-avatars.com/api/?name=${encodeURIComponent(ch.name)}&background=8B0000&color=fff&bold=true`;
     if(hudLogo) hudLogo.src = ch.logo || fallback;
-
-    // Seguridad: Quitar loader tras 7 segundos si el link está caído
-    const safetyTimeout = setTimeout(() => { if(loader) loader.style.display = 'none'; }, 7000);
 
     hls.destroy();
     hls = new Hls();
     pN.pause(); pN.src = ""; pY.src = "";
     pN.style.display = 'none'; pY.style.display = 'none';
 
-    // IMPORTANTE: Muted para evitar bloqueo de reproducción en Android
-    pN.muted = true;
+    // CONFIGURACIÓN CRÍTICA PARA ANDROID
+    pN.muted = true;      // Mute inicial para saltar bloqueo de Android
+    pN.autoplay = true;   // Forzar auto-arranque
+    pN.setAttribute('playsinline', 'true');
 
     if (ch.type === "yt") {
         pY.style.display = 'block';
-        // mute=1 es fundamental para que YouTube no se pause al cargar en segundo plano
-        pY.src = `https://www.youtube.com/embed/${ch.id}?autoplay=1&controls=0&mute=1&rel=0`;
-        setTimeout(() => { 
-            if(loader) loader.style.display = 'none'; 
-            clearTimeout(safetyTimeout);
-        }, 3000);
+        pY.src = `https://www.youtube.com/embed/${ch.id}?autoplay=1&mute=1&controls=0&rel=0`;
+        setTimeout(() => { if(loader) loader.style.display = 'none'; }, 3000);
     } else {
         pN.style.display = 'block';
         if (Hls.isSupported()) {
             hls.loadSource(ch.url);
             hls.attachMedia(pN);
             hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                pN.play().then(() => {
-                    clearTimeout(safetyTimeout);
-                    if(loader) loader.style.display = 'none';
-                }).catch(() => { if(loader) loader.style.display = 'none'; });
+                // INTENTO DE PLAY CON PROMESA
+                let playPromise = pN.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        if(loader) loader.style.display = 'none';
+                    }).catch(() => {
+                        console.log("Esperando interacción para sonar...");
+                        if(loader) loader.style.display = 'none';
+                    });
+                }
             });
         } else {
             pN.src = ch.url;
+            pN.play();
             if(loader) loader.style.display = 'none';
         }
     }
 
-    // Mostrar HUD de info y ocultar tras 4 seg
     document.body.classList.add('ui-show');
     clearTimeout(window._hudTimer);
     window._hudTimer = setTimeout(() => { document.body.classList.remove('ui-show'); }, 4000);
 }
 
-// --- CONTROL REMOTO Y TECLADO ---
+// --- CONTROLES (DESBLOQUEO DE AUDIO Y NAVEGACIÓN) ---
 function setupControls() {
     document.addEventListener('keydown', (e) => {
-        // ACTIVADOR DE SONIDO: Al tocar cualquier tecla, el video se desmutea
+        // CUALQUIER TECLA ACTIVA EL VIDEO Y EL SONIDO
         const pN = document.getElementById('player');
-        if(pN && pN.muted) { pN.muted = false; pN.volume = 1.0; }
+        if(pN) {
+            if (pN.paused) pN.play(); // Fuerza play si estaba en el logo de pausa
+            pN.muted = false;         // Activa el audio
+            pN.volume = 1.0;
+        }
 
         const menuItems = ["FAVORITOS", ...Object.keys(categorias)];
 
-        // Manejo de Favoritos (Pulsación Larga Enter)
+        // Long Press para Favoritos
         if (e.key === "Enter" && currentSection === "channels") {
             if (!timer) {
                 timer = setTimeout(() => {
                     const ch = currentList[selectedChIndex];
                     if (ch && !ch.isCountry) {
                         FavoritesManager.toggle(ch);
-                        showToast(FavoritesManager.isFavorite(ch.name) ? "⭐ AGREGADO A FAVORITOS" : "🗑️ ELIMINADO");
+                        showToast(FavoritesManager.isFavorite(ch.name) ? "⭐ GUARDADO" : "🗑️ ELIMINADO");
                         renderCards();
                     }
                     timer = "fired";
@@ -156,7 +143,6 @@ function setupControls() {
             return;
         }
 
-        // Navegación en el Menú
         switch(e.key) {
             case "ArrowDown":
                 if (currentSection === "categories") {
@@ -206,7 +192,7 @@ function setupControls() {
     });
 }
 
-// --- RENDERIZADO DE INTERFAZ ---
+// --- RENDERIZADO ---
 function renderCategories() {
     const container = document.getElementById('category-list');
     const menuItems = ["FAVORITOS", ...Object.keys(categorias)];
@@ -247,7 +233,7 @@ function renderCards() {
     });
 }
 
-// --- FUNCIONES EXTRA ---
+// --- M3U Y NAVEGACIÓN ---
 async function enterCountry(countryObj) {
     const container = document.getElementById('channel-list');
     container.innerHTML = '<div class="loader-vip"></div>';
@@ -301,8 +287,7 @@ function showToast(text) {
         t.id = 'toast';
         document.body.appendChild(t);
     }
-    t.innerText = text;
-    t.style.display = 'block';
+    t.innerText = text; t.style.display = 'block';
     setTimeout(() => { t.style.display = 'none'; }, 2000);
 }
 
