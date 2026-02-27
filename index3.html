@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>10TV Premium</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+<div id="splash">
+    <div class="dragon-glow"></div> 
+    <div class="splash-content">
+        <div class="splash-logo">
+            <img src="files/logo.png" alt="Logo" onerror="this.style.display='none'">
+        </div>
+        <div class="loader-vip"></div>
+        <p class="loading-msg" style="letter-spacing: 5px; font-weight: bold;">SISTEMA PREMIUM ACTIVADO</p>
+    </div>
+</div>
+
+<div id="main-stage">
+    <div id="video-container">
+        <video id="player" playsinline muted></video>
+        <iframe id="yt-player" allow="autoplay; encrypted-media" frameborder="0"></iframe>
+        <div id="video-shield"></div>
+    </div>
+    
+    <div id="loading-overlay">
+        <img src="files/carga.png" class="bg-loading" alt="Cargando Fondo" onerror="this.style.display='none'">
+        <div class="loader-container">
+            <div class="loader-vip"></div>
+            <p style="color:white; letter-spacing:3px; font-weight:bold; text-shadow: 2px 2px 4px #000;">CARGANDO SEÑAL...</p>
+        </div>
+    </div>
+
+    <div id="hud">
+        <img id="hud-logo" src="" alt="Logo Canal" onerror="this.src='https://ui-avatars.com/api/?name=TV&background=330000&color=fff'">
+        <div class="hud-text">
+            <h1 id="ch-title">SELECCIONE UN CANAL</h1>
+        </div>
+    </div>
+
+    <div id="guide">
+        <div class="guide-layout">
+            <div class="side-menu" id="category-list"></div>
+            <div class="main-list" id="channel-list"></div>
+        </div>
+    </div>
+</div>
+
+<div id="publicidad-container" style="display:none;"></div>
+
+<script src="js/channels.js"></script>
+<script src="js/script3.js"></script>
+
+<script>
+/**
+ * Lógica mejorada para Publicidad en APK
+ * Se ejecuta después de que el splash desaparece
+ */
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        fetch('publicidad.html')
+            .then(response => {
+                if (!response.ok) throw new Error('No hay publicidad');
+                return response.text();
+            })
+            .then(html => {
+                const container = document.getElementById('publicidad-container');
+                container.innerHTML = html;
+                container.style.display = 'block';
+                
+                // Intentar dar foco al botón de cerrar si existe en publicidad.html
+                const btn = document.getElementById('btn-aceptar-pub');
+                if(btn) {
+                    btn.focus();
+                    btn.onclick = () => {
+                        container.style.display = 'none';
+                        container.innerHTML = '';
+                    };
+                }
+            })
+            .catch(err => {
+                console.log("Aviso: " + err.message);
+                // Si no hay publicidad, el flujo sigue normal sin trabarse
+            });
+    }, 3500); 
+});
+
+// Forzar que el video se desmutee al primer click del usuario (Requerido por Android)
+document.addEventListener('click', () => {
+    const p = document.getElementById('player');
+    if(p) p.muted = false;
+}, { once: true });
+</script>
+
+</body>
+</html>
