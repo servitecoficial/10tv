@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>10TV Streaming Pro</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <link rel="stylesheet" href="style-index2.css">
+</head>
+<body>
+    <div id="splash" class="splash">
+        <div class="splash__orb"></div>
+        <div class="splash__content">
+            <img src="files/logo.png" alt="10TV" class="splash__logo" onerror="this.style.display='none'">
+            <div class="loader-ring"></div>
+            <p class="splash__text">INICIANDO EXPERIENCIA STREAMING</p>
+        </div>
+    </div>
+
+    <main class="app-shell">
+        <section class="player-stage">
+            <video id="player" playsinline muted></video>
+            <iframe id="yt-player" allow="autoplay; encrypted-media" frameborder="0" title="YouTube player"></iframe>
+            <div class="player-stage__scrim"></div>
+        </section>
+
+        <section id="loading-overlay" class="loading-overlay" aria-hidden="true">
+            <div class="loading-overlay__box">
+                <div class="loader-ring"></div>
+                <p>Cargando senal...</p>
+            </div>
+        </section>
+
+        <section id="hud" class="hud">
+            <img id="hud-logo" src="" alt="Logo del canal" class="hud__logo">
+            <div class="hud__text">
+                <span class="hud__eyebrow">Ahora viendo</span>
+                <h1 id="hud-title">10TV</h1>
+                <p id="hud-meta">Usa Derecha para abrir el menu y Izquierda para volver.</p>
+            </div>
+        </section>
+
+        <aside id="guide" class="guide" aria-hidden="true">
+            <div class="guide__glass"></div>
+            <div class="guide__content">
+                <div class="guide__sidebar">
+                    <div class="guide__header">
+                        <span class="guide__kicker">Explorar</span>
+                        <h2>Biblioteca</h2>
+                    </div>
+                    <div id="category-list" class="category-list"></div>
+                </div>
+
+                <div class="guide__main">
+                    <div class="guide__topbar">
+                        <div>
+                            <span class="guide__kicker">Ubicacion</span>
+                            <h3 id="breadcrumb">Inicio</h3>
+                        </div>
+                        <div class="guide__hint">
+                            <span>Derecha abre menu</span>
+                            <span>Izquierda vuelve o cierra</span>
+                        </div>
+                    </div>
+
+                    <div id="now-playing-card" class="now-playing-card">
+                        <span class="now-playing-card__label">Reproduciendo</span>
+                        <div class="now-playing-card__body">
+                            <img id="now-playing-logo" src="" alt="Logo actual">
+                            <div>
+                                <strong id="now-playing-title">Sin canal activo</strong>
+                                <p id="now-playing-subtitle">La reproduccion sigue visible mientras navegas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="channel-list" class="channel-list"></div>
+                </div>
+            </div>
+        </aside>
+
+        <section id="ad-overlay" class="ad-overlay" aria-hidden="true">
+            <div class="ad-overlay__backdrop"></div>
+            <div class="ad-overlay__card">
+                <span class="ad-overlay__eyebrow">Publicidad</span>
+                <div id="ad-media" class="ad-overlay__media"></div>
+                <div class="ad-overlay__body">
+                    <h3 id="ad-title">Anuncio</h3>
+                    <p id="ad-description">Contenido promocional</p>
+                    <a id="ad-cta" class="ad-overlay__cta" href="#" target="_blank" rel="noopener noreferrer">Abrir enlace</a>
+                </div>
+                <button id="ad-dismiss" class="ad-overlay__dismiss" type="button">Cerrar</button>
+            </div>
+        </section>
+
+        <section id="push-ad" class="push-ad" aria-hidden="true">
+            <div class="push-ad__content">
+                <img id="push-ad-logo" class="push-ad__logo" src="" alt="Logo publicidad">
+                <div class="push-ad__text">
+                    <strong id="push-ad-title">Publicidad</strong>
+                    <p id="push-ad-description">Mensaje promocional</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="toast" class="toast" aria-live="polite"></section>
+    </main>
+
+    <script src="js/index2.channels.js"></script>
+    <script src="js/index2.app.js"></script>
+</body>
+</html>

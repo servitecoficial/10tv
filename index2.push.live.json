@@ -1,0 +1,12 @@
+{
+  "enabled": true,
+  "items": [
+    {
+      "id": "live-demo",
+      "logo": "files/logo.png",
+      "title": "Push en tiempo real",
+      "description": "Edita este archivo y la app tomara el cambio automaticamente.",
+      "active": true
+    }
+  ]
+}

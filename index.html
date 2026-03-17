@@ -21,8 +21,16 @@
 </div>
 
 <div id="main-stage">
-    <video id="player" playsinline></video>
+<<<<<<< Updated upstream
+    <video id="player" playsinline muted></video>
     <iframe id="yt-player" allow="autoplay; encrypted-media"></iframe>
+=======
+    <div id="video-container">
+        <video id="player" playsinline muted autoplay></video>
+        <iframe id="yt-player" allow="autoplay; encrypted-media"></iframe>
+        <div id="video-shield"></div>
+    </div>
+>>>>>>> Stashed changes
     
     <div id="loading-overlay">
         <img src="files/carga.png" class="bg-loading" alt="Cargando Fondo">
@@ -47,8 +55,61 @@
     </div>
 </div>
 
+<div id="publicidad-container"></div>
+
 <script src="js/channels.js"></script>
 <script src="js/script.js"></script>
 
+<script>
+<<<<<<< Updated upstream
+// Lógica auxiliar similar a la de index3.html
+window.addEventListener('load', () => {
+    // cerrar splash si queda visible
+    setTimeout(() => {
+        const sp = document.getElementById('splash');
+        if(sp && sp.style.display !== 'none') {
+            sp.style.opacity = '0';
+            setTimeout(() => { sp.style.display = 'none'; }, 600);
+        }
+    }, 5000);
+});
+
+// desbloqueo de audio en caso de que el reproductor arranque en mute
+// (se complementa con el código de script.js)
+document.addEventListener('click', () => {
+    const p = document.getElementById('player');
+    if(p) {
+        p.muted = false;
+        p.volume = 1.0;
+    }
+}, { once: true });
+</script>
+
+=======
+// ACTIVADOR DE VOLUMEN: Al primer toque en la APK, se activa el sonido
+['click', 'touchstart', 'keydown'].forEach(evt => {
+    document.addEventListener(evt, () => {
+        const p = document.getElementById('player');
+        if(p) { p.muted = false; p.volume = 1.0; }
+    }, { once: true });
+});
+
+// Tu lógica de publicidad se mantiene igual
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        fetch('publicidad.html')
+            .then(res => res.text())
+            .then(html => {
+                const container = document.getElementById('publicidad-container');
+                container.innerHTML = html;
+                const btn = document.getElementById('btn-aceptar-pub');
+                if(btn) {
+                    btn.onclick = () => { container.style.display = 'none'; container.innerHTML = ''; };
+                }
+            }).catch(e => console.log("Publicidad off"));
+    }, 3500);
+});
+</script>
+>>>>>>> Stashed changes
 </body>
 </html>

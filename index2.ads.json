@@ -1,0 +1,35 @@
+{
+  "enabled": true,
+  "showOnStart": true,
+  "startDelayMs": 4200,
+  "showEveryChannelChanges": 4,
+  "skipAfterSeconds": 0,
+  "items": [
+    {
+      "id": "promo-10tv",
+      "type": "image",
+      "title": "gracias por utilizarnos.",
+      "description": "Este proyecto no tiene ningun servidor lo unico que hace es utiizar listas externas",
+      "image": "files/logo.png",
+      "ctaText": "actualizaciones",
+      "ctaUrl": "https://example.com"
+    }
+  ],
+  "push": {
+    "enabled": true,
+    "intervalMs": 45000,
+    "durationMs": 30000,
+    "liveFile": "index2.push.live.json",
+    "pollLiveMs": 5000,
+    "items": [
+      {
+        "id": "push-10tv",
+        "logo": "files/logo.png",
+        "title": "Gracias por usar 10tv10TV",
+        "description": "Consulta los mejores abogados",
+        "startAt": "",
+        "endAt": ""
+      }
+    ]
+  }
+}
