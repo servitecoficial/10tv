@@ -22,7 +22,6 @@
         playingChannelLogo: "",
         currentPlayableList: [],
         currentPlayableIndex: -1,
-        channelChangeCount: 0,
         adConfig: null,
         adIndex: 0,
         pushIndex: 0,
@@ -589,14 +588,10 @@
         state.playingChannelId = channel.id;
         state.playingChannelName = channel.name;
         state.playingChannelLogo = channel.logo || fallbackLogo(channel.name);
-        if (!options.silentLoader) {
-            state.channelChangeCount += 1;
-        }
         updateHud(channel);
         updateNowPlayingCard();
         updatePlayableQueue();
         renderChannelList();
-        maybeShowAdOnChannelChange();
 
         if (channel.type === "yt") {
             playYouTube(channel, silentLoader);
@@ -625,14 +620,27 @@
     }
 
     function playYouTube(channel, silentLoader) {
+        const origin = window.location.origin && window.location.origin !== "null"
+            ? window.location.origin
+            : "https://www.youtube.com";
+        const embedUrl = `https://www.youtube-nocookie.com/embed/${channel.ytId}?autoplay=1&mute=1&controls=0&rel=0&playsinline=1&enablejsapi=1&modestbranding=1&loop=1&playlist=${channel.ytId}&origin=${encodeURIComponent(origin)}&t=${Date.now()}`;
+
         els.ytPlayer.style.display = "block";
-        els.ytPlayer.src = `https://www.youtube.com/embed/${channel.ytId}?autoplay=1&mute=1&controls=0&rel=0&enablejsapi=1&playsinline=1`;
+        els.ytPlayer.src = "about:blank";
         window.setTimeout(() => {
+            els.ytPlayer.src = embedUrl;
+        }, 40);
+        window.setTimeout(() => {
+            sendYouTubeCommand("playVideo");
+            sendYouTubeCommand("unMute");
             unlockAudio();
             if (!silentLoader) {
                 showLoader(false);
             }
         }, 1400);
+        window.setTimeout(() => {
+            sendYouTubeCommand("playVideo");
+        }, 2400);
         showHud(channel.description || "Canal en vivo");
     }
 
@@ -775,16 +783,6 @@
                 openAd();
             }
         }, delay);
-    }
-
-    function maybeShowAdOnChannelChange() {
-        const every = Number(state.adConfig?.showEveryChannelChanges || 0);
-        if (!state.adConfig || !every || state.channelChangeCount === 0) {
-            return;
-        }
-        if (state.channelChangeCount % every === 0) {
-            openAd();
-        }
     }
 
     function openAd() {
@@ -1030,11 +1028,16 @@
             els.player.muted = false;
             els.player.volume = 1;
         }
+        sendYouTubeCommand("unMute");
+        sendYouTubeCommand("playVideo");
+    }
+
+    function sendYouTubeCommand(commandName, args = []) {
         if (els.ytPlayer?.contentWindow) {
             els.ytPlayer.contentWindow.postMessage(JSON.stringify({
                 event: "command",
-                func: "unMute",
-                args: []
+                func: commandName,
+                args
             }), "*");
         }
     }

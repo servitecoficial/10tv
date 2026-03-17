@@ -2,7 +2,6 @@
   "enabled": true,
   "showOnStart": true,
   "startDelayMs": 4200,
-  "showEveryChannelChanges": 4,
   "skipAfterSeconds": 0,
   "items": [
     {
