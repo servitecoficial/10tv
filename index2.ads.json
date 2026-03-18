@@ -16,7 +16,7 @@
   ],
   "push": {
     "enabled": true,
-    "intervalMs": 45000,
+    "intervalMs": 600000,
     "durationMs": 30000,
     "liveFile": "index2.push.live.json",
     "pollLiveMs": 5000,

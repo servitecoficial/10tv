@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>10TV Streaming Pro</title>
-        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-        <link rel="stylesheet" href="style-index2.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>10TV Streaming Pro | Lab</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <link rel="stylesheet" href="style-index2.css">
+    <style>
+        .interaction-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 45;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: rgba(2, 6, 12, 0.72);
+            backdrop-filter: blur(10px);
+        }
+
+        .interaction-overlay.active {
+            display: flex;
+        }
+
+        .interaction-overlay__button {
+            width: min(520px, 100%);
+            min-height: 78px;
+            padding: 20px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 24px;
+            background: linear-gradient(135deg, rgba(255, 90, 31, 0.96), rgba(255, 129, 34, 0.88));
+            color: #fff;
+            text-align: left;
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+            cursor: pointer;
+        }
+
+        .interaction-overlay__button strong {
+            display: block;
+            font-size: 1.15rem;
+        }
+
+        .interaction-overlay__button span {
+            display: block;
+            margin-top: 6px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
 <body>
     <div id="splash" class="splash">
         <div class="splash__orb"></div>
@@ -113,7 +154,7 @@
         <section id="toast" class="toast" aria-live="polite"></section>
     </main>
 
-    <script src="js/index2.channels.js"></script>
-    <script src="js/index2.app.js"></script>
+    <script src="js/index4.channels.js"></script>
+    <script src="js/index4.app.js"></script>
 </body>
 </html>

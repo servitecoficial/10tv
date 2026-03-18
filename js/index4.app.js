@@ -36,9 +36,7 @@
         youtubeLoadToken: 0,
         youtubeRecoveryTimer: null,
         interactionOverlayVisible: false,
-        userInteracted: false,
-        storageMode: "localStorage",
-        memoryFavorites: []
+        userInteracted: false
     };
 
     const els = {};
@@ -46,31 +44,14 @@
     const Favorites = {
         load() {
             try {
-                if (state.storageMode === "memory") {
-                    return state.memoryFavorites.slice();
-                }
                 const parsed = JSON.parse(localStorage.getItem(FAVORITES_KEY));
-                const normalized = normalizeFavorites(parsed);
-                state.memoryFavorites = normalized.slice();
-                return normalized;
+                return Array.isArray(parsed) ? parsed : [];
             } catch (_error) {
-                state.storageMode = "memory";
-                return state.memoryFavorites.slice();
+                return [];
             }
         },
         save(items) {
-            const normalized = normalizeFavorites(items);
-            state.memoryFavorites = normalized.slice();
-
-            if (state.storageMode === "memory") {
-                return;
-            }
-
-            try {
-                localStorage.setItem(FAVORITES_KEY, JSON.stringify(normalized));
-            } catch (_error) {
-                state.storageMode = "memory";
-            }
+            localStorage.setItem(FAVORITES_KEY, JSON.stringify(items));
         },
         isFavorite(channelId) {
             return this.load().some((item) => item.id === channelId);
@@ -99,7 +80,6 @@
     };
 
     function init() {
-        initFavoritesStorage();
         cacheElements();
         state.hls = window.Hls && Hls.isSupported() ? new Hls() : null;
         state.breadcrumb = [APP_CATALOG[0]?.title || "Inicio"];
@@ -667,6 +647,7 @@
         window.setTimeout(() => {
             els.ytPlayer.src = embedUrl;
         }, 40);
+
         scheduleYouTubeAutoplay(loadToken, autoplayMuted, silentLoader);
         showHud(channel.description || "Canal en vivo");
     }
@@ -1164,70 +1145,6 @@
         return /; wv\)|Version\/[\d.]+ Chrome\/[\d.]+ Mobile/i.test(ua)
             || /AppInventor|MIT App Inventor/i.test(ua)
             || /wv/i.test(appVersion);
-    }
-
-    function initFavoritesStorage() {
-        try {
-            const probeKey = `${FAVORITES_KEY}__probe`;
-            localStorage.setItem(probeKey, "1");
-            localStorage.removeItem(probeKey);
-            state.storageMode = "localStorage";
-            state.memoryFavorites = normalizeFavorites(JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]"));
-            localStorage.setItem(FAVORITES_KEY, JSON.stringify(state.memoryFavorites));
-        } catch (_error) {
-            state.storageMode = "memory";
-            state.memoryFavorites = [];
-        }
-    }
-
-    function normalizeFavorites(items) {
-        if (!Array.isArray(items)) {
-            return [];
-        }
-
-        const seen = new Set();
-        return items
-            .map((item, index) => normalizeFavoriteItem(item, index))
-            .filter((item) => {
-                if (!item || seen.has(item.id)) {
-                    return false;
-                }
-                seen.add(item.id);
-                return true;
-            });
-    }
-
-    function normalizeFavoriteItem(item, index) {
-        if (!item || typeof item !== "object") {
-            return null;
-        }
-
-        const type = item.type === "m3u8" ? "hls" : item.type;
-        if (type !== "hls" && type !== "yt") {
-            return null;
-        }
-
-        const name = String(item.name || `Favorito ${index + 1}`).trim();
-        const safeId = String(item.id || slugify(name) || `favorito-${index + 1}`).trim();
-        const normalized = {
-            id: safeId,
-            name,
-            type,
-            url: String(item.url || "").trim(),
-            ytId: String(item.ytId || item.idYoutube || "").trim(),
-            logo: String(item.logo || "").trim(),
-            description: String(item.description || "").trim()
-        };
-
-        if (normalized.type === "yt" && !normalized.ytId) {
-            return null;
-        }
-
-        if (normalized.type === "hls" && !normalized.url) {
-            return null;
-        }
-
-        return normalized;
     }
 
     function showLoader(active) {
