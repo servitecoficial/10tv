@@ -448,6 +448,10 @@ body.menu-open .hud {
     min-width: 0;
 }
 
+.channel-card__meta-wrap {
+    margin-top: 6px;
+}
+
 .channel-card__title-row {
     display: flex;
     align-items: center;
@@ -462,6 +466,16 @@ body.menu-open .hud {
 
 .channel-card__meta {
     font-size: 0.88rem;
+}
+
+.channel-card__meta--primary {
+    color: #f6f7fb;
+}
+
+.channel-card__meta--secondary {
+    margin-top: 4px;
+    font-size: 0.8rem;
+    color: var(--muted);
 }
 
 .channel-card__badge {

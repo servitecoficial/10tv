@@ -38,7 +38,10 @@
         interactionOverlayVisible: false,
         userInteracted: false,
         storageMode: "localStorage",
-        memoryFavorites: []
+        memoryFavorites: [],
+        epgIndex: {},
+        epgLoaded: false,
+        epgTimer: null
     };
 
     const els = {};
@@ -89,7 +92,9 @@
                     url: channel.url || "",
                     ytId: channel.ytId || "",
                     logo: channel.logo || "",
-                    description: channel.description || ""
+                    description: channel.description || "",
+                    epgId: channel.epgId || channel.tvgId || "",
+                    epgName: channel.epgName || channel.tvgName || ""
                 });
             }
 
@@ -111,6 +116,7 @@
         updateNowPlayingCard();
         bindEvents();
         loadAdsConfig();
+        loadEpgData();
 
         window.addEventListener("load", () => {
             window.setTimeout(hideSplash, 1800);
@@ -467,7 +473,20 @@
 
             const isFavorite = Favorites.isFavorite(item.id);
             const badge = item.type === "playlist" ? "Lista" : isFavorite ? "Favorito" : "";
-            const status = item.type === "playlist" ? "Abrir lista" : isPlaying ? "En reproduccion" : "Listo para ver";
+            const epg = getChannelEpg(item);
+            const metaPrimary = epg?.current
+                ? `${formatProgramTime(epg.current.startMs)} - ${formatProgramTime(epg.current.stopMs)} | ${epg.current.title}`
+                : (item.description || descriptionByType(item.type));
+            const metaSecondary = epg?.next
+                ? `Sigue ${formatProgramTime(epg.next.startMs)} | ${epg.next.title}`
+                : (epg?.current?.subtitle || "");
+            const status = item.type === "playlist"
+                ? "Abrir lista"
+                : epg?.current
+                    ? `En guia hasta ${formatProgramTime(epg.current.stopMs)}`
+                    : isPlaying
+                        ? "En reproduccion"
+                        : "Listo para ver";
 
             card.innerHTML = `
                 <img class="channel-card__logo" src="${escapeAttribute(item.logo || fallbackLogo(item.name))}" alt="${escapeAttribute(item.name)}" onerror="this.src='${escapeAttribute(fallbackLogo(item.name))}'">
@@ -476,7 +495,10 @@
                         <h4 class="channel-card__title">${escapeHtml(item.name)}</h4>
                         ${badge ? `<span class="channel-card__badge">${escapeHtml(badge)}</span>` : ""}
                     </div>
-                    <p class="channel-card__meta">${escapeHtml(item.description || descriptionByType(item.type))}</p>
+                    <div class="channel-card__meta-wrap">
+                        <p class="channel-card__meta channel-card__meta--primary">${escapeHtml(metaPrimary)}</p>
+                        ${metaSecondary ? `<p class="channel-card__meta channel-card__meta--secondary">${escapeHtml(metaSecondary)}</p>` : ""}
+                    </div>
                 </div>
                 <div class="channel-card__status">${escapeHtml(status)}</div>
             `;
@@ -507,10 +529,13 @@
     function updateNowPlayingCard() {
         const title = state.playingChannelName || "Sin canal activo";
         const logo = state.playingChannelLogo || fallbackLogo(title);
+        const epg = state.currentChannel ? getChannelEpg(state.currentChannel) : null;
         els.nowPlayingLogo.src = logo;
         els.nowPlayingTitle.textContent = title;
         els.nowPlayingSubtitle.textContent = state.playingChannelName
-            ? "La imagen del canal sigue visible mientras navegas por las listas."
+            ? (epg?.current
+                ? `Ahora ${formatProgramTime(epg.current.startMs)} - ${formatProgramTime(epg.current.stopMs)}: ${epg.current.title}${epg.next ? ` | Sigue ${formatProgramTime(epg.next.startMs)}: ${epg.next.title}` : ""}`
+                : "La imagen del canal sigue visible mientras navegas por las listas.")
             : "Abre una categoria y selecciona Ver ahora.";
     }
 
@@ -589,6 +614,8 @@
 
             const name = line.split(",").pop()?.trim() || `Canal ${channels.length + 1}`;
             const logoMatch = line.match(/tvg-logo="([^"]+)"/i);
+            const tvgIdMatch = line.match(/tvg-id="([^"]+)"/i);
+            const tvgNameMatch = line.match(/tvg-name="([^"]+)"/i);
             const id = `${sourceId}-${slugify(name)}-${channels.length}`;
 
             channels.push({
@@ -597,7 +624,9 @@
                 type: "hls",
                 url: nextLine,
                 logo: logoMatch ? logoMatch[1] : "",
-                description: "Canal cargado desde lista externa"
+                description: "Canal cargado desde lista externa",
+                tvgId: tvgIdMatch ? tvgIdMatch[1].trim() : "",
+                tvgName: tvgNameMatch ? tvgNameMatch[1].trim() : ""
             });
         }
 
@@ -774,10 +803,15 @@
     }
 
     function updateHud(channel) {
+        const epg = getChannelEpg(channel);
         els.hudLogo.src = channel.logo || fallbackLogo(channel.name);
         els.hudTitle.textContent = channel.name;
-        els.hudMeta.textContent = channel.description || "Canal en reproduccion";
-        showHud(channel.description || "Canal en reproduccion");
+        els.hudMeta.textContent = epg?.current
+            ? `Ahora: ${epg.current.title}${epg.next ? ` | Sigue ${formatProgramTime(epg.next.startMs)}: ${epg.next.title}` : ""}`
+            : (channel.description || "Canal en reproduccion");
+        showHud(epg?.current
+            ? `Ahora: ${epg.current.title}${epg.next ? ` | Sigue ${formatProgramTime(epg.next.startMs)}: ${epg.next.title}` : ""}`
+            : (channel.description || "Canal en reproduccion"));
     }
 
     function showHud(message) {
@@ -1216,7 +1250,9 @@
             url: String(item.url || "").trim(),
             ytId: String(item.ytId || item.idYoutube || "").trim(),
             logo: String(item.logo || "").trim(),
-            description: String(item.description || "").trim()
+            description: String(item.description || "").trim(),
+            epgId: String(item.epgId || item.tvgId || "").trim(),
+            epgName: String(item.epgName || item.tvgName || "").trim()
         };
 
         if (normalized.type === "yt" && !normalized.ytId) {
@@ -1228,6 +1264,276 @@
         }
 
         return normalized;
+    }
+
+    async function loadEpgData() {
+        const config = window.EPG_CONFIG;
+        if (!config?.sources?.length) {
+            return;
+        }
+
+        const cached = loadEpgCache();
+        if (cached) {
+            state.epgIndex = cached;
+            state.epgLoaded = true;
+            refreshEpgUi();
+        }
+
+        try {
+            const responses = await Promise.allSettled(
+                config.sources.map((source) => fetch(`${source.url}?t=${Date.now()}`, { cache: "no-store" }))
+            );
+
+            const mergedIndex = {};
+
+            for (const responseEntry of responses) {
+                if (responseEntry.status !== "fulfilled" || !responseEntry.value?.ok) {
+                    continue;
+                }
+
+                const text = await responseEntry.value.text();
+                mergeEpgIndex(mergedIndex, parseXmltv(text));
+            }
+
+            if (Object.keys(mergedIndex).length) {
+                state.epgIndex = mergedIndex;
+                state.epgLoaded = true;
+                saveEpgCache(mergedIndex);
+                refreshEpgUi();
+            }
+        } catch (_error) {
+            if (!state.epgLoaded) {
+                showToast("La guia de programacion no se pudo actualizar");
+            }
+        }
+
+        clearInterval(state.epgTimer);
+        state.epgTimer = window.setInterval(() => {
+            refreshEpgUi();
+        }, Number(config.refreshUiMs || 60000));
+    }
+
+    function parseXmltv(text) {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(text, "text/xml");
+        const parseError = doc.querySelector("parsererror");
+        if (parseError) {
+            return {};
+        }
+
+        const now = Date.now();
+        const channelNamesById = new Map();
+        const programByChannelId = new Map();
+
+        doc.querySelectorAll("channel").forEach((channelNode) => {
+            const channelId = channelNode.getAttribute("id") || "";
+            const names = Array.from(channelNode.querySelectorAll("display-name"))
+                .map((node) => node.textContent.trim())
+                .filter(Boolean);
+            if (channelId) {
+                channelNamesById.set(channelId, names);
+            }
+        });
+
+        doc.querySelectorAll("programme").forEach((programmeNode) => {
+            const channelId = programmeNode.getAttribute("channel") || "";
+            const startMs = parseXmltvDate(programmeNode.getAttribute("start"));
+            const stopMs = parseXmltvDate(programmeNode.getAttribute("stop"));
+
+            if (!channelId || !Number.isFinite(startMs) || !Number.isFinite(stopMs)) {
+                return;
+            }
+
+            const program = {
+                title: (programmeNode.querySelector("title")?.textContent || "").trim(),
+                subtitle: (programmeNode.querySelector("sub-title")?.textContent || "").trim(),
+                desc: (programmeNode.querySelector("desc")?.textContent || "").trim(),
+                startMs,
+                stopMs
+            };
+
+            const currentEntry = programByChannelId.get(channelId) || { current: null, next: null };
+
+            if (startMs <= now && stopMs > now) {
+                if (!currentEntry.current || startMs > currentEntry.current.startMs) {
+                    currentEntry.current = program;
+                }
+            } else if (startMs > now) {
+                if (!currentEntry.next || startMs < currentEntry.next.startMs) {
+                    currentEntry.next = program;
+                }
+            }
+
+            programByChannelId.set(channelId, currentEntry);
+        });
+
+        const index = {};
+
+        programByChannelId.forEach((snapshot, channelId) => {
+            const keys = [channelId].concat(channelNamesById.get(channelId) || []);
+            keys.forEach((key) => {
+                const normalizedKey = normalizeEpgKey(key);
+                if (!normalizedKey) {
+                    return;
+                }
+                assignEpgSnapshot(index, normalizedKey, snapshot);
+            });
+        });
+
+        return index;
+    }
+
+    function parseXmltvDate(value) {
+        const match = String(value || "").match(/^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})\s*([+-]\d{4})?/);
+        if (!match) {
+            return NaN;
+        }
+
+        const [, year, month, day, hour, minute, second, offset] = match;
+        const utcTime = Date.UTC(
+            Number(year),
+            Number(month) - 1,
+            Number(day),
+            Number(hour),
+            Number(minute),
+            Number(second)
+        );
+
+        if (!offset) {
+            return utcTime;
+        }
+
+        const sign = offset.startsWith("-") ? -1 : 1;
+        const offsetHours = Number(offset.slice(1, 3));
+        const offsetMinutes = Number(offset.slice(3, 5));
+        const totalOffsetMs = sign * ((offsetHours * 60) + offsetMinutes) * 60 * 1000;
+        return utcTime - totalOffsetMs;
+    }
+
+    function mergeEpgIndex(target, source) {
+        Object.entries(source || {}).forEach(([key, snapshot]) => {
+            assignEpgSnapshot(target, key, snapshot);
+        });
+    }
+
+    function assignEpgSnapshot(target, key, snapshot) {
+        if (!snapshot || !key) {
+            return;
+        }
+
+        const existing = target[key];
+        if (!existing || (!existing.current && snapshot.current) || (!existing.next && snapshot.next)) {
+            target[key] = snapshot;
+        }
+    }
+
+    function getChannelEpg(channel) {
+        if (!channel || !state.epgIndex) {
+            return null;
+        }
+
+        const keys = buildEpgKeysForChannel(channel);
+        for (const key of keys) {
+            if (state.epgIndex[key]) {
+                return state.epgIndex[key];
+            }
+        }
+        return null;
+    }
+
+    function buildEpgKeysForChannel(channel) {
+        const keys = [];
+        const aliases = window.EPG_CONFIG?.aliases || {};
+        const normalizedName = normalizeEpgKey(channel.name);
+        const configuredAliases = aliases[normalizedName] || [];
+
+        [
+            channel.epgId,
+            channel.tvgId,
+            channel.epgName,
+            channel.tvgName,
+            channel.name,
+            ...configuredAliases
+        ].forEach((value) => {
+            const normalized = normalizeEpgKey(value);
+            if (normalized && !keys.includes(normalized)) {
+                keys.push(normalized);
+            }
+        });
+
+        return keys;
+    }
+
+    function normalizeEpgKey(value) {
+        return String(value || "")
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/&/g, "and")
+            .replace(/[^a-z0-9]+/g, " ")
+            .trim()
+            .replace(/\s+/g, " ");
+    }
+
+    function formatProgramTime(timeMs) {
+        if (!Number.isFinite(timeMs)) {
+            return "";
+        }
+        return new Intl.DateTimeFormat("es-AR", {
+            hour: "2-digit",
+            minute: "2-digit"
+        }).format(new Date(timeMs));
+    }
+
+    function refreshEpgUi() {
+        renderChannelList();
+        updateNowPlayingCard();
+        if (state.currentChannel) {
+            updateHud(state.currentChannel);
+        }
+    }
+
+    function loadEpgCache() {
+        try {
+            const config = window.EPG_CONFIG;
+            if (!config?.cacheKey || state.storageMode === "memory") {
+                return null;
+            }
+
+            const raw = localStorage.getItem(config.cacheKey);
+            if (!raw) {
+                return null;
+            }
+
+            const parsed = JSON.parse(raw);
+            if (!parsed?.savedAt || !parsed?.index) {
+                return null;
+            }
+
+            if ((Date.now() - parsed.savedAt) > Number(config.cacheTtlMs || 0)) {
+                return null;
+            }
+
+            return parsed.index;
+        } catch (_error) {
+            return null;
+        }
+    }
+
+    function saveEpgCache(index) {
+        try {
+            const config = window.EPG_CONFIG;
+            if (!config?.cacheKey || state.storageMode === "memory") {
+                return;
+            }
+
+            localStorage.setItem(config.cacheKey, JSON.stringify({
+                savedAt: Date.now(),
+                index
+            }));
+        } catch (_error) {
+            // ignore cache errors in restricted webviews
+        }
     }
 
     function showLoader(active) {

@@ -12,7 +12,7 @@ const APP_CATALOG = [
         items: [
             { id: "tn", name: "TN", type: "yt", ytId: "cb12KmMMDJA", logo: "https://upload.wikimedia.org/wikipedia/commons/9/98/Tn_logo12.png", description: "Noticias en vivo" },
             { id: "c5n", name: "C5N", type: "yt", ytId: "SF06Qy1Ct6Y", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c9/C5N_Logo_2015.PNG", description: "Cobertura informativa" },
-             { id: "A 24", name: "A24", type: "hls", url: "https://dai.google.com/linear/hls/pa/event/Txk1vDlZR2CCfDuUZ0ylpw/stream/836d75b4-e8c0-4ad2-a0d9-1c992cd42e9e:SCL2/variant/b20e54831be1870c77de57c177c43ab4/bandwidth/2800000.m3u8", logo: "https://www.a24.com/assets/img/296/header-logo-v2.svg", description: "Noticias" },
+             { id: "A 24", name: "A24", type: "hls", url: "https://dai.google.com/linear/hls/pa/event/Txk1vDlZR2CCfDuUZ0ylpw/stream/1ee9403f-c6c7-4d7b-81a6-b8e89cfb6ca4:SCL2/variant/b20e54831be1870c77de57c177c43ab4/bandwidth/2800000.m3u8", logo: "https://www.a24.com/assets/img/296/header-logo-v2.svg", description: "Noticias" },
             { id: "canal26", name: "Canal 26", type: "yt", ytId: "5pGvInH-lWw", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Canal26_logo.png", description: "Actualidad y debates" },
             { id: "telefe-noticias", name: "Telefe Noticias", type: "yt", ytId: "XhAYcYpPzTc", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Telefe_Noticias_logo_2018.svg/1024px-Telefe_Noticias_logo_2018.svg.png", description: "Informativo Telefe" },
             { id: "urbana-play", name: "Urbana Play", type: "yt", ytId: "fE78C91mD4I", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Urbana_Play_logo.svg/1200px-Urbana_Play_logo.svg.png", description: "Radio con video" },
@@ -44,6 +44,15 @@ const APP_CATALOG = [
             { id: "espana", name: "Espana", type: "playlist", url: "https://iptv-org.github.io/iptv/countries/es.m3u", logo: "https://flagcdn.com/w160/es.png", description: "Senales espanolas" },
             { id: "mexico", name: "Mexico", type: "playlist", url: "https://iptv-org.github.io/iptv/countries/mx.m3u", logo: "https://flagcdn.com/w160/mx.png", description: "TV abierta y cultura" },
             { id: "pluto-es", name: "Pluto TV Series", type: "playlist", url: "https://iptv-org.github.io/iptv/languages/spa.m3u", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Pluto_TV_logo.svg/1200px-Pluto_TV_logo.svg.png", description: "Canales tematicos en espanol" }
+        ]
+    },
+    {
+        id: "listas-argentinas-extra",
+        title: "Listas argentinas",
+        description: "Playlists nuevas agregadas por separado.",
+        items: [
+            { id: "argentina-gist-fran", name: "Argentina Gist", type: "playlist", url: "https://gist.githubusercontent.com/frantdse/f6989518c73826ade6734c63c367af4c/raw/", logo: "https://flagcdn.com/w160/ar.png", description: "Lista remota desde gist" },
+            { id: "argentina-extra-local", name: "Argentina Extra", type: "playlist", url: "files/argentina-extra.m3u", logo: "https://flagcdn.com/w160/ar.png", description: "Lista local con noticias, abierta, tematicos e internacional" }
         ]
     },
     {
