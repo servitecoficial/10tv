@@ -56,6 +56,25 @@ const APP_CATALOG = [
         ]
     },
     {
+        id: "de-todo",
+        title: "De todo",
+        description: "Accesos separados por pais y genero para completar a medida.",
+        items: [
+            { id: "de-todo-argentina", name: "Argentina", type: "playlist", url: "files/de-todo-argentina.m3u", logo: "https://flagcdn.com/w160/ar.png", description: "Sublista argentina" },
+            { id: "de-todo-chile", name: "Chile", type: "playlist", url: "files/de-todo-chile.m3u", logo: "https://flagcdn.com/w160/cl.png", description: "Sublista chilena" },
+            { id: "de-todo-mexico", name: "Mexico", type: "playlist", url: "files/de-todo-mexico.m3u", logo: "https://flagcdn.com/w160/mx.png", description: "Sublista mexicana" },
+            { id: "de-todo-colombia", name: "Colombia", type: "playlist", url: "files/de-todo-colombia.m3u", logo: "https://flagcdn.com/w160/co.png", description: "Sublista colombiana" },
+            { id: "de-todo-peru", name: "Peru", type: "playlist", url: "files/de-todo-peru.m3u", logo: "https://flagcdn.com/w160/pe.png", description: "Sublista peruana" },
+            { id: "de-todo-espana", name: "Espana", type: "playlist", url: "files/de-todo-espana.m3u", logo: "https://flagcdn.com/w160/es.png", description: "Sublista espanola" },
+            { id: "de-todo-noticias", name: "Noticias", type: "playlist", url: "files/de-todo-noticias.m3u", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Deutsche_Welle_symbol_2012.svg/2560px-Deutsche_Welle_symbol_2012.svg.png", description: "Canales de noticias" },
+            { id: "de-todo-deportes", name: "Deportes", type: "playlist", url: "files/de-todo-deportes.m3u", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Olympic_rings_without_rims.svg/1200px-Olympic_rings_without_rims.svg.png", description: "Canales deportivos" },
+            { id: "de-todo-musica", name: "Musica", type: "playlist", url: "files/de-todo-musica.m3u", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Musical_notes.svg/1200px-Musical_notes.svg.png", description: "Canales musicales" },
+            { id: "de-todo-infantiles", name: "Infantiles", type: "playlist", url: "files/de-todo-infantiles.m3u", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/OOjs_UI_icon_userAvatar.svg/1024px-OOjs_UI_icon_userAvatar.svg.png", description: "Canales infantiles" },
+            { id: "de-todo-cultura", name: "Cultura", type: "playlist", url: "files/de-todo-cultura.m3u", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/OOjs_UI_icon_article-ltr.svg/1024px-OOjs_UI_icon_article-ltr.svg.png", description: "Cultura y documental" },
+            { id: "de-todo-entretenimiento", name: "Entretenimiento", type: "playlist", url: "files/de-todo-entretenimiento.m3u", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Clapperboard.svg/1024px-Clapperboard.svg.png", description: "Series y variedades" }
+        ]
+    },
+    {
         id: "musica-247",
         title: "Musica y 24/7",
         description: "Listas para dejar de fondo.",

@@ -1,0 +1,20 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-name="Colombia Demo" group-title="Colombia",Colombia Demo
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+ext,Red Mas,http://infored.lcdn.claro.net.co/Content/hls_clear/live/Channel(REDTVHD)/index.m3u8
+ext,RCN2 HD,https://rcnhd.cdn.net.co/live02/rcnhd2_720p.m3u8
+NTN24.us,NTN24,https://rcnhd.cdn.net.co/live04/ntn24_480p.m3u8
+ext,RCN,https://rcnhd.cdn.net.co/live01/rcnhd.m3u8
+ext,RCN2 HD,https://rcnhd.cdn.net.co/live02/rcnhd2_720p.m3u8
+NTN24.us,NTN24,https://rcnhd.cdn.net.co/live04/ntn24_480p.m3u8
+ext,Red Mas,http://infored.lcdn.claro.net.co/Content/hls_clear/live/Channel(REDTVHD)/index.m3u8
+ext,Canal Capital HD,https://mdstrm.com/live-stream-playlist/57d01d6c28b263eb73b59a5a.m3u8
+ext,RCN,https://rcnhd.cdn.net.co/live01/rcnhd_720p.m3u8
+ext,Senal Colombia,http://live10.cdnmedia.tv/rtvcscolombialive/smil:live.smil/master.m3u8
+ext,Telemedellin,http://api.new.livestream.com/accounts/4608897/events/7111788/live.m3u8
+ext,Cable Noticias,http://cnmedia.eastus2.cloudapp.azure.com:1935/live/cablenoticiastv_360p/chunklist_w287478439.m3u8?iptvgratis?chile.m3u8
+ext,Telecaribe,http://telecaribe-hd.gcdn.anvato.net/hls/live/telecaribehd/2196k/index.m3u8
+ext,RCN Colombia,http://mdstrm.com:80/live-stream-playlist/58a36704896500b908cf1abe.m3u8
+ext,TC HD COLOMBIA,http://elcanaldelfutbol.com/static/wowza/test/hls/10001/720p/playlist.m3u8
+ext,COLOMBIA:Canal Capital HD,https://mdstrm.com/live-stream-playlist/57d01d6c28b263eb73b59a5a.m3u8

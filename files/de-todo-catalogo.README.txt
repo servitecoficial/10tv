@@ -1,0 +1,25 @@
+ARCHIVO: files/de-todo-catalogo.json
+
+Como usarlo:
+1. Busca el grupo que quieras.
+2. Dentro de channels, deja suggestedUrl como referencia.
+3. Pega tu URL final en la propiedad url.
+4. Cambia enabled a true cuando ese canal deba quedar activo.
+5. Si quieres agregar un logo, completa logo con una imagen publica.
+
+Ejemplo:
+{
+  "id": "argentina-canal-26",
+  "name": "Canal 26",
+  "type": "hls",
+  "url": "https://tu-url-final.m3u8",
+  "suggestedUrl": "https://referencia-sacada-de-canales.txt",
+  "logo": "https://tu-logo.png",
+  "description": "Noticias Argentina",
+  "enabled": true
+}
+
+Notas:
+- suggestedUrl no se usa para reproducir; es solo referencia.
+- url es la que usarias realmente.
+- Si enabled sigue en false, puedes ignorar ese canal hasta completarlo.

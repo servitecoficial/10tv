@@ -1,0 +1,34 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-name="Deportes Demo" group-title="Deportes",Deportes Demo
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+
+ext,Futbol en vivo 1,http://cdn-hw.aliez.me/hls/streama79484/index.m3u8
+ext,Telecaribe Deportes,http://telecaribe-deportes.gcdn.anvato.net/hls/live/telecaribedeporteshd2/2196k/index.m3u8
+ext,Bolivia Deportes,http://btvboliviatv.srfms.com:6568/live/livestream/playlist.m3u8
+ext,Fight Time,http://node01.openfutbol.es/SVoriginOperatorEdge/128761.smil/.m3u8
+ext,Fight Time,http://109.232.71.249/stream/stream_fighttime/fighttimehd.m3u8?xtreamiptv.m3u8
+RealMadridTV.sp,Real Madrid TV HD,http://rmtvlive-lh.akamaihd.net/i/rmtv_1@154306/index_1000_av-p.m3u8?sd=10&rebase=on?xtreamiptv.m3u8
+ext,Sevilla FC,http://sevillafc_live-lh.akamaihd.net/i/video_0@354142/index_0300_av-b.m3u8?xtreamiptv.m3u8
+ESPN2.us,ESPN 2 USA,http://161.0.157.9/PLTV/88888888/224/3221226881/index.m3u8
+FOXSportsRacing.ca,Fox Sports Racing,http://161.0.157.8/PLTV/88888888/224/3221226181/index.m3u8
+ext,Stadium Sports Network,https://d28avce4cnwu2y.cloudfront.net/v1/manifest/61a556f78e4547c8ab5c6297ea291d6350767ca2/Mux/37f5dd6d-5713-4998-8354-8c6675612b42/0.m3u8
+ext,All Sports,http://173.236.10.10:1935/dgrau/dgrau/playlist.m3u8?xtreamiptv.m3u8
+MLBNetwork.us,MLB Network,http://mlblive-akc.mlb.com/ls01/mlbam/mlb_network/NETWORK_LINEAR_1/master_mobile.m3u8?xtreamiptv.m3u8
+SkyNews.uk,SKY News,http://skydvn-nowtv-atv-prod.skydvn.com/atv/skynews/1404/live/05.m3u8?xtreamiptv.m3u8
+ext,Red Bull TV,https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_1660.m3u8?xtreamiptv.m3u8
+ext,Dubai Sports,http://dmi.mangomolo.com:1935/dubaisports/smil:dubaisports.smil/master.m3u8?xtreamiptv.m3u8
+ext,Abu Dhabi Sports,http://www.elahmad.com/tv/m3u8/adtv.m3u8?xtreamiptv.m3u8
+ext,Abu Dhabi Sports SD,http://adtv.ercdn.net/adsport1/adsport1.m3u8?xtreamiptv.m3u8
+ext,Abu Dhabi Sports SD*,http://adtv.ercdn.net/adsport1/adsport1_480p.m3u8?xtreamiptv.m3u8
+ext,Abu Dhabi Sports HD,http://adtv.ercdn.net/adsport1/adsport1_720p.m3u8?xtreamiptv.m3u8
+ADSports2.net,Abu Dhabi Sports 2,http://www.elahmad.com/tv/m3u8/adtv.m3u8?xtreamiptv.m3u8
+ADSports2.net,Abu Dhabi Sports 2 SD,http://adtv.ercdn.net/adsport2/adsport2.m3u8?xtreamiptv.m3u8
+ADSports2.net,Abu Dhabi Sports 2 SD*,http://adtv.ercdn.net/adsport2/adsport2_480p.m3u8?xtreamiptv.m3u8
+ext,Abu Dhabi Sports 2 HD,http://adtv.ercdn.net/adsport2/adsport2_720p.m3u8?xtreamiptv.m3u8
+ext,Al Kass Sports,http://www.elahmad.com/tv/m3u8/alkass.m3u8?xtreamiptv.m3u8
+ext,Al Kass Sports 2,http://www.elahmad.com/tv/m3u8/alkass.m3u8?xtreamiptv.m3u8
+ext,Al Kass Sports 3,http://www.elahmad.com/tv/m3u8/alkass.m3u8?xtreamiptv.m3u8
+ext,Al Kass Sports 4,http://www.elahmad.com/tv/m3u8/alkass.m3u8?xtreamiptv.m3u8
+ext,Al Kass Sports 5,http://www.elahmad.com/tv/m3u8/alkass.m3u8?xtreamiptv.m3u8

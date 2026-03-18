@@ -1,0 +1,11 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-name="Cultura Demo" group-title="Cultura",Cultura Demo
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+ext,Cultura 24,http://vs8.live.opencaster.com/cultura24/smil:cultura24/chunklist_w1710773429_b564000_sles.m3u8
+travel,Travel HD,http://31.13.223.104:1935/travel/community.stream/playlist.m3u8?xtreamiptv.m3u8
+ext,NASA Space Station 1,http://iphone-streaming.ustream.tv/uhls/17074538/streams/live/iphone/playlist.m3u8?xtreamiptv.m3u8
+ext,NASA Space Station 2,http://iphone-streaming.ustream.tv/uhls/9408562/streams/live/iphone/playlist.m3u8?xtreamiptv.m3u8
+silence-tv,Silence TV,http://109.236.85.100:8081/sipTV/live/playlist.m3u8?xtreamiptv.m3u8
+ext,CULTURA:Silence TV,http://109.236.85.100:8081/sipTV/live/playlist.m3u8
+ext,Cultura 24,http://vs8.live.opencaster.com/cultura24/smil:cultura24/chunklist_w1710773429_b564000_sles.m3u8

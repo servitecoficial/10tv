@@ -1,0 +1,23 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-name="Chile Demo" group-title="Chile",Chile Demo
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+ext,Canal 26 1,http://200.115.193.177/live/26hd-480/.m3u8?iptvgratis?chile.m3u8
+ext,Canal 26 2,http://live-edge01.telecentro.net.ar/live/smil:c26.smil/chunklist_w188793591_b1864000_sleng.m3u8?iptvgratis?chile.m3u8
+ext,Canal 26 3,http://live-edge01.telecentro.net.ar/live/smil:c26.smil/chunklist_w1700708876_b1264000_sleng.m3u8?iptvgratis?chile.m3u8
+ext,Canal 2 Telpin Tv,http://wowza.telpin.com.ar:1935/telpintv/ttv.stream_720p/playlist.m3u8?iptvgratis?chile.m3u8
+ext,Canal BHtv,http://cdn2.ujjina.com:1935/iptvbhtv/livebhtvtv/playlist.m3u8?iptvgratis?chile.m3u8
+ext,MUSICA:Portal Foxmix (Chile),http://tv.portalfoxmix.club:1935/portalfoxmix/portalfoxmix/playlist.m3u8
+ext,MUSICA:PortalFoxMix Tv,http://149.56.17.92:1935/portalfoxmix/_definst_/portalfoxmix/chunklist_w1915378513.m3u8?iptvgratis?chile.m3u8
+ext,MUSICA:Teleritmo,http://mdstrm.com/live-stream-playlist/57b4dc126338448314449d0c.m3u8?iptvgratis?chile.m3u8
+ext,MUSICA:Music Top Argentina,http://live-edge01.telecentro.net.ar/live/smil:musictop.smil/playlist.m3u8?iptvgratis?chile.m3u8
+ext,MUSICA:Dream Tv,http://live.netd.com.tr/S1/HLS_LIVE/dreamtv/1000/prog_index.m3u8?iptvgratis?chile.m3u8
+ext,CHILE:Tv Senado 1 HD,http://janus-tv-ply.senado.cl/playlist/stream.m3u8?s=tvsenado-hd
+ext,ARGENTINA:TLX,http://live-edge01.telecentro.net.ar/live/smil:tlx.smil/chunklist_w1527043435_b1828000_sleng.m3u8?iptvgratis?chile.m3u8
+iptvgratis?chile.m3u8
+ext,MEXICO:Multimedios Monterrey,http://mdstrm.com/live-stream-playlist/57b4dbf5dbbfc8f16bb63ce1.m3u8?iptvgratis?chile.m3u8
+ext,MEXICO:Multimedios,http://mdstrm.com/live-stream-playlist/57bf686a61ff39e1085d43e1.m3u8?iptvgratis?chile.m3u8
+ext,MEXICO:Multimedios,http://mdstrm.com/live-stream-playlist/57b4db886338448314449cfa.m3u8?iptvgratis?chile.m3u8
+ext,MEXICO:TV Mas,http://50.7.98.234:1935/rtv/videortv/chunklist.m3u8?iptvgratis?chile.m3u8
+ext,MUSICA:M2o Tv,http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_600_av-b.m3u8?iptvgratis?chile.m3u8
