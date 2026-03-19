@@ -1,0 +1,33 @@
+#EXTM3U
+#EXTINF:-1 tvg-name="Colombia Demo" group-title="Colombia",Colombia Demo
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+#EXTINF:-1 tvg-name="Red Mas" group-title="Colombia" source-tag="ext",Red Mas
+http://infored.lcdn.claro.net.co/Content/hls_clear/live/Channel(REDTVHD)/index.m3u8
+#EXTINF:-1 tvg-name="RCN2 HD" group-title="Colombia" source-tag="ext",RCN2 HD
+https://rcnhd.cdn.net.co/live02/rcnhd2_720p.m3u8
+#EXTINF:-1 tvg-name="NTN24" group-title="Colombia" source-tag="NTN24.us",NTN24
+https://rcnhd.cdn.net.co/live04/ntn24_480p.m3u8
+#EXTINF:-1 tvg-name="RCN" group-title="Colombia" source-tag="ext",RCN
+https://rcnhd.cdn.net.co/live01/rcnhd.m3u8
+#EXTINF:-1 tvg-name="RCN2 HD" group-title="Colombia" source-tag="ext",RCN2 HD
+https://rcnhd.cdn.net.co/live02/rcnhd2_720p.m3u8
+#EXTINF:-1 tvg-name="NTN24" group-title="Colombia" source-tag="NTN24.us",NTN24
+https://rcnhd.cdn.net.co/live04/ntn24_480p.m3u8
+#EXTINF:-1 tvg-name="Red Mas" group-title="Colombia" source-tag="ext",Red Mas
+http://infored.lcdn.claro.net.co/Content/hls_clear/live/Channel(REDTVHD)/index.m3u8
+#EXTINF:-1 tvg-name="Canal Capital HD" group-title="Colombia" source-tag="ext",Canal Capital HD
+https://mdstrm.com/live-stream-playlist/57d01d6c28b263eb73b59a5a.m3u8
+#EXTINF:-1 tvg-name="RCN" group-title="Colombia" source-tag="ext",RCN
+https://rcnhd.cdn.net.co/live01/rcnhd_720p.m3u8
+#EXTINF:-1 tvg-name="Senal Colombia" group-title="Colombia" source-tag="ext",Senal Colombia
+http://live10.cdnmedia.tv/rtvcscolombialive/smil:live.smil/master.m3u8
+#EXTINF:-1 tvg-name="Telemedellin" group-title="Colombia" source-tag="ext",Telemedellin
+http://api.new.livestream.com/accounts/4608897/events/7111788/live.m3u8
+#EXTINF:-1 tvg-name="Cable Noticias" group-title="Colombia" source-tag="ext",Cable Noticias
+http://cnmedia.eastus2.cloudapp.azure.com:1935/live/cablenoticiastv_360p/chunklist_w287478439.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Telecaribe" group-title="Colombia" source-tag="ext",Telecaribe
+http://telecaribe-hd.gcdn.anvato.net/hls/live/telecaribehd/2196k/index.m3u8
+#EXTINF:-1 tvg-name="RCN Colombia" group-title="Colombia" source-tag="ext",RCN Colombia
+http://mdstrm.com:80/live-stream-playlist/58a36704896500b908cf1abe.m3u8
+#EXTINF:-1 tvg-name="TC HD COLOMBIA" group-title="Colombia" source-tag="ext",TC HD COLOMBIA
+http://elcanaldelfutbol.com/static/wowza/test/hls/10001/720p/playlist.m3u8

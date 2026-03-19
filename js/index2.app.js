@@ -41,7 +41,11 @@
         memoryFavorites: [],
         epgIndex: {},
         epgLoaded: false,
-        epgTimer: null
+        epgTimer: null,
+        startupPromptOpen: false,
+        startupFocusIndex: 0,
+        pendingStartupChannel: null,
+        youtubeMuted: true
     };
 
     const els = {};
@@ -120,9 +124,13 @@
 
         window.addEventListener("load", () => {
             window.setTimeout(hideSplash, 1800);
-            const firstPlayable = findFirstPlayable(APP_CATALOG);
-            if (firstPlayable) {
-                playChannel(firstPlayable, { silentLoader: true });
+            state.pendingStartupChannel = findFirstPlayable(APP_CATALOG);
+            if (shouldShowStartupPrompt()) {
+                window.setTimeout(() => {
+                    openStartupPrompt();
+                }, 350);
+            } else if (state.pendingStartupChannel) {
+                playChannel(state.pendingStartupChannel, { silentLoader: true });
             }
             scheduleStartupAd();
         });
@@ -159,6 +167,17 @@
         els.toast = document.getElementById("toast");
         els.interactionOverlay = document.getElementById("interaction-overlay");
         els.interactionButton = document.getElementById("interaction-button");
+        els.startupOverlay = document.getElementById("startup-overlay");
+        els.startupTitle = document.getElementById("startup-title");
+        els.startupMessage = document.getElementById("startup-message");
+        els.startupUpdate = document.getElementById("startup-update");
+        els.startupClose = document.getElementById("startup-close");
+        els.startupQrImage = document.getElementById("startup-qr-image");
+        els.startupQrFallback = document.getElementById("startup-qr-fallback");
+        els.startupTelegramTitle = document.getElementById("startup-telegram-title");
+        els.startupTelegramMessage = document.getElementById("startup-telegram-message");
+        els.playerControls = document.getElementById("player-controls");
+        els.youtubeAudioToggle = document.getElementById("youtube-audio-toggle");
     }
 
     function bindEvents() {
@@ -168,6 +187,15 @@
         els.adDismiss.addEventListener("click", closeAd);
         if (els.interactionButton) {
             els.interactionButton.addEventListener("click", handleInteractionOverlayConfirm);
+        }
+        if (els.startupUpdate) {
+            els.startupUpdate.addEventListener("click", () => runStartupAction("update"));
+        }
+        if (els.startupClose) {
+            els.startupClose.addEventListener("click", () => runStartupAction("close"));
+        }
+        if (els.youtubeAudioToggle) {
+            els.youtubeAudioToggle.addEventListener("click", () => toggleYouTubeAudio());
         }
     }
 
@@ -180,6 +208,12 @@
         }
 
         event.preventDefault();
+
+        if (state.startupPromptOpen) {
+            handleStartupPrompt(key);
+            return;
+        }
+
         unlockAudio();
 
         if (state.adOpen) {
@@ -196,6 +230,11 @@
     }
 
     function handlePlayerMode(key) {
+        if (state.currentChannel?.type === "yt" && (key === "Enter" || key === "ArrowLeft")) {
+            toggleYouTubeAudio();
+            return;
+        }
+
         if (key === "ArrowRight") {
             openMenu();
             return;
@@ -213,6 +252,29 @@
 
         if (key === "Enter") {
             showHud("Usa Derecha para abrir el menu.");
+        }
+    }
+
+    function handleStartupPrompt(key) {
+        if (key === "ArrowLeft" || key === "ArrowUp") {
+            state.startupFocusIndex = 0;
+            renderStartupPromptFocus();
+            return;
+        }
+
+        if (key === "ArrowRight" || key === "ArrowDown") {
+            state.startupFocusIndex = 1;
+            renderStartupPromptFocus();
+            return;
+        }
+
+        if (key === "Enter") {
+            runStartupAction(state.startupFocusIndex === 0 ? "update" : "close");
+            return;
+        }
+
+        if (key === "Backspace" || key === "Escape") {
+            runStartupAction("close");
         }
     }
 
@@ -600,37 +662,128 @@
     function parseM3U(text, sourceId) {
         const channels = [];
         const lines = text.split(/\r?\n/);
+        const seen = new Set();
+        let currentGroup = "Lista";
 
         for (let index = 0; index < lines.length; index += 1) {
             const line = lines[index].trim();
-            if (!line.startsWith("#EXTINF")) {
+
+            if (!line || line.startsWith("#EXTM3U")) {
                 continue;
             }
 
-            const nextLine = (lines[index + 1] || "").trim();
-            if (!/^https?:/i.test(nextLine)) {
+            if (/^group,/i.test(line)) {
+                currentGroup = line.split(",").slice(1).join(",").trim() || "Lista";
                 continue;
             }
 
-            const name = line.split(",").pop()?.trim() || `Canal ${channels.length + 1}`;
-            const logoMatch = line.match(/tvg-logo="([^"]+)"/i);
-            const tvgIdMatch = line.match(/tvg-id="([^"]+)"/i);
-            const tvgNameMatch = line.match(/tvg-name="([^"]+)"/i);
-            const id = `${sourceId}-${slugify(name)}-${channels.length}`;
+            if (line.startsWith("#EXTINF")) {
+                const nextLine = (lines[index + 1] || "").trim();
+                if (!/^https?:/i.test(nextLine)) {
+                    continue;
+                }
 
-            channels.push({
-                id,
-                name,
-                type: "hls",
-                url: nextLine,
-                logo: logoMatch ? logoMatch[1] : "",
-                description: "Canal cargado desde lista externa",
-                tvgId: tvgIdMatch ? tvgIdMatch[1].trim() : "",
-                tvgName: tvgNameMatch ? tvgNameMatch[1].trim() : ""
-            });
+                const name = line.split(",").pop()?.trim() || `Canal ${channels.length + 1}`;
+                const logoMatch = line.match(/tvg-logo="([^"]+)"/i);
+                const tvgIdMatch = line.match(/tvg-id="([^"]+)"/i);
+                const tvgNameMatch = line.match(/tvg-name="([^"]+)"/i);
+                const groupMatch = line.match(/group-title="([^"]+)"/i);
+
+                registerParsedChannel(channels, seen, {
+                    id: `${sourceId}-${slugify(name)}-${channels.length}`,
+                    name,
+                    type: "hls",
+                    url: nextLine,
+                    logo: logoMatch ? logoMatch[1] : "",
+                    description: buildExternalDescription(groupMatch ? groupMatch[1].trim() : currentGroup),
+                    tvgId: tvgIdMatch ? tvgIdMatch[1].trim() : "",
+                    tvgName: tvgNameMatch ? tvgNameMatch[1].trim() : ""
+                }, sourceId);
+                continue;
+            }
+
+            const parsedLoose = parseLooseChannelLine(line, currentGroup, sourceId, channels.length);
+            if (parsedLoose) {
+                registerParsedChannel(channels, seen, parsedLoose, sourceId);
+            }
         }
 
         return channels;
+    }
+
+    function parseLooseChannelLine(line, currentGroup, sourceId, index) {
+        const parts = line.split(",");
+        if (parts.length < 3) {
+            return null;
+        }
+
+        const sourceTag = (parts[0] || "").trim();
+        const url = (parts[parts.length - 1] || "").trim();
+        const name = parts.slice(1, -1).join(",").trim();
+
+        if (!/^https?:/i.test(url) || !name) {
+            return null;
+        }
+
+        if (/\.(png|jpg|jpeg|webp|gif)(["']?)$/i.test(url) || /^group-title=/i.test(name)) {
+            return null;
+        }
+
+        const inferredGroup = inferGroupFromName(name, currentGroup);
+
+        return {
+            id: `${sourceId}-${slugify(name)}-${index}`,
+            name: cleanChannelName(name),
+            type: "hls",
+            url,
+            logo: "",
+            description: buildExternalDescription(inferredGroup),
+            tvgId: sourceTag !== "ext" ? sourceTag : "",
+            tvgName: cleanChannelName(name)
+        };
+    }
+
+    function registerParsedChannel(channels, seen, channel, sourceId) {
+        const normalizedName = cleanChannelName(channel.name);
+        const key = `${normalizedName.toLowerCase()}|${String(channel.url || "").toLowerCase()}`;
+
+        if (!normalizedName || !channel.url || seen.has(key)) {
+            return false;
+        }
+
+        seen.add(key);
+        channels.push({
+            id: channel.id || `${sourceId}-${slugify(normalizedName)}-${channels.length}`,
+            name: normalizedName,
+            type: "hls",
+            url: channel.url,
+            logo: channel.logo || "",
+            description: channel.description || "Canal cargado desde lista externa",
+            tvgId: channel.tvgId || "",
+            tvgName: channel.tvgName || normalizedName
+        });
+        return true;
+    }
+
+    function cleanChannelName(name) {
+        return String(name || "")
+            .replace(/^[A-ZÁÉÍÓÚÑ0-9 /+-]+:\s*/i, "")
+            .replace(/\|\s*(SD|HD|FHD)\s*$/i, "")
+            .replace(/\s+/g, " ")
+            .trim();
+    }
+
+    function inferGroupFromName(name, fallbackGroup) {
+        const match = String(name || "").match(/^([A-ZÁÉÍÓÚÑ0-9 /+-]+):\s*/i);
+        if (match && match[1]) {
+            return match[1].trim();
+        }
+        return fallbackGroup || "Lista";
+    }
+
+    function buildExternalDescription(groupTitle) {
+        const group = String(groupTitle || "Lista").trim();
+        return `Canal cargado desde lista externa | ${group}`;
     }
 
     function playChannel(channel, options = {}) {
@@ -665,6 +818,7 @@
     function destroyPlayerSource() {
         clearTimeout(state.youtubeRecoveryTimer);
         hideInteractionOverlay();
+        state.youtubeMuted = true;
         try {
             if (state.hls) {
                 state.hls.destroy();
@@ -680,6 +834,7 @@
         els.player.style.display = "none";
         els.ytPlayer.src = "";
         els.ytPlayer.style.display = "none";
+        updatePlayerControls();
     }
 
     function playYouTube(channel, silentLoader) {
@@ -689,6 +844,7 @@
             ? window.location.origin
             : "https://www.youtube.com";
         const autoplayMuted = shouldForceMutedAutoplay();
+        state.youtubeMuted = autoplayMuted;
         const embedUrl = `https://www.youtube-nocookie.com/embed/${channel.ytId}?autoplay=1&mute=${autoplayMuted ? "1" : "0"}&controls=0&rel=0&playsinline=1&enablejsapi=1&modestbranding=1&loop=1&playlist=${channel.ytId}&fs=1&origin=${encodeURIComponent(origin)}&t=${Date.now()}`;
 
         els.ytPlayer.style.display = "block";
@@ -697,6 +853,7 @@
             els.ytPlayer.src = embedUrl;
         }, 40);
         scheduleYouTubeAutoplay(loadToken, autoplayMuted, silentLoader);
+        updatePlayerControls();
         showHud(channel.description || "Canal en vivo");
     }
 
@@ -711,8 +868,10 @@
                 sendYouTubeCommand("playVideo");
                 if (autoplayMuted) {
                     sendYouTubeCommand("mute");
+                    state.youtubeMuted = true;
                 } else if (state.userInteracted) {
                     sendYouTubeCommand("unMute");
+                    state.youtubeMuted = false;
                 }
 
                 if (index >= 1) {
@@ -812,6 +971,7 @@
         showHud(epg?.current
             ? `Ahora: ${epg.current.title}${epg.next ? ` | Sigue ${formatProgramTime(epg.next.startMs)}: ${epg.next.title}` : ""}`
             : (channel.description || "Canal en reproduccion"));
+        updatePlayerControls();
     }
 
     function showHud(message) {
@@ -862,30 +1022,27 @@
                 return;
             }
             const config = await response.json();
-            if (config && config.enabled && Array.isArray(config.items) && config.items.length) {
+            if (config && config.enabled) {
                 state.adConfig = config;
                 if (document.readyState === "complete") {
                     scheduleStartupAd();
                 }
                 schedulePushAds();
                 startLivePushPolling();
+                return;
             }
+            state.adConfig = null;
         } catch (_error) {
             state.adConfig = null;
         }
     }
 
     function scheduleStartupAd() {
-        if (!state.adConfig?.showOnStart || state.startupAdScheduled) {
+        if (state.startupAdScheduled) {
             return;
         }
+        // El inicio queda reservado solo para la pantalla principal de bienvenida.
         state.startupAdScheduled = true;
-        const delay = Number(state.adConfig.startDelayMs || 3500);
-        window.setTimeout(() => {
-            if (!state.adOpen) {
-                openAd();
-            }
-        }, delay);
     }
 
     function openAd() {
@@ -1135,8 +1292,10 @@
         sendYouTubeCommand("playVideo");
         if (state.currentChannel?.type === "yt" && !shouldForceMutedAutoplay()) {
             sendYouTubeCommand("unMute");
+            state.youtubeMuted = false;
         }
         hideInteractionOverlay();
+        updatePlayerControls();
     }
 
     function sendYouTubeCommand(commandName, args = []) {
@@ -1155,12 +1314,15 @@
         sendYouTubeCommand("playVideo");
         if (!shouldForceMutedAutoplay()) {
             sendYouTubeCommand("unMute");
+            state.youtubeMuted = false;
         } else {
             sendYouTubeCommand("mute");
+            state.youtubeMuted = true;
         }
         if (state.currentChannel?.type === "yt") {
             playYouTube(state.currentChannel, true);
         }
+        updatePlayerControls();
     }
 
     function showInteractionOverlay() {
@@ -1491,6 +1653,127 @@
         if (state.currentChannel) {
             updateHud(state.currentChannel);
         }
+    }
+
+    function shouldShowStartupPrompt() {
+        return Boolean(window.APP_LAUNCH_CONFIG?.startupPromptEnabled);
+    }
+
+    function openStartupPrompt() {
+        if (!els.startupOverlay) {
+            if (state.pendingStartupChannel) {
+                playChannel(state.pendingStartupChannel, { silentLoader: true });
+            }
+            return;
+        }
+
+        const config = window.APP_LAUNCH_CONFIG || {};
+        state.startupPromptOpen = true;
+        state.startupFocusIndex = 0;
+
+        els.startupTitle.textContent = config.startupTitle || "Actualizacion disponible";
+        els.startupMessage.textContent = config.startupMessage || "Revisa tu version antes de entrar.";
+        els.startupUpdate.textContent = config.startupUpdateLabel || "Actualizar";
+        els.startupClose.textContent = config.startupCloseLabel || "Cerrar";
+        els.startupTelegramTitle.textContent = config.telegramTitle || "Canal de Telegram";
+        els.startupTelegramMessage.textContent = config.telegramMessage || "Agrega tu QR cuando lo tengas.";
+
+        const qrImage = String(config.telegramQrImage || "").trim();
+        els.startupQrImage.classList.remove("is-ready");
+        els.startupQrFallback.style.display = "flex";
+        if (qrImage) {
+            els.startupQrImage.onload = () => {
+                els.startupQrImage.classList.add("is-ready");
+                els.startupQrFallback.style.display = "none";
+            };
+            els.startupQrImage.onerror = () => {
+                els.startupQrImage.classList.remove("is-ready");
+                els.startupQrFallback.style.display = "flex";
+            };
+            els.startupQrImage.src = qrImage;
+        } else {
+            els.startupQrImage.removeAttribute("src");
+        }
+
+        els.startupOverlay.classList.add("active");
+        els.startupOverlay.setAttribute("aria-hidden", "false");
+        renderStartupPromptFocus();
+        updatePlayerControls();
+    }
+
+    function closeStartupPrompt() {
+        if (!state.startupPromptOpen) {
+            return;
+        }
+
+        state.startupPromptOpen = false;
+        els.startupOverlay.classList.remove("active");
+        els.startupOverlay.setAttribute("aria-hidden", "true");
+
+        if (state.pendingStartupChannel && !state.playingChannelId) {
+            playChannel(state.pendingStartupChannel, { silentLoader: true });
+        }
+        updatePlayerControls();
+    }
+
+    function renderStartupPromptFocus() {
+        if (!els.startupUpdate || !els.startupClose) {
+            return;
+        }
+
+        els.startupUpdate.classList.toggle("is-focused", state.startupFocusIndex === 0);
+        els.startupClose.classList.toggle("is-focused", state.startupFocusIndex === 1);
+    }
+
+    function runStartupAction(action) {
+        const config = window.APP_LAUNCH_CONFIG || {};
+
+        if (action === "update") {
+            const updateUrl = String(config.updateUrl || config.telegramUrl || "").trim();
+            if (!updateUrl) {
+                showToast("Configura APP_LAUNCH_CONFIG.updateUrl o telegramUrl");
+                return;
+            }
+            try {
+                window.open(updateUrl, "_blank", "noopener");
+            } catch (_error) {
+                window.location.href = updateUrl;
+            }
+            return;
+        }
+
+        closeStartupPrompt();
+    }
+
+    function toggleYouTubeAudio() {
+        if (state.currentChannel?.type !== "yt") {
+            showToast("El control rapido de audio es solo para YouTube");
+            return;
+        }
+
+        state.userInteracted = true;
+        state.youtubeMuted = !state.youtubeMuted;
+        if (state.youtubeMuted) {
+            sendYouTubeCommand("mute");
+            showToast("YouTube en silencio");
+        } else {
+            sendYouTubeCommand("unMute");
+            sendYouTubeCommand("playVideo");
+            showToast("YouTube con sonido");
+        }
+        updatePlayerControls();
+    }
+
+    function updatePlayerControls() {
+        if (!els.playerControls || !els.youtubeAudioToggle) {
+            return;
+        }
+
+        const visible = state.currentChannel?.type === "yt" && !state.startupPromptOpen;
+        els.playerControls.classList.toggle("active", visible);
+        els.playerControls.setAttribute("aria-hidden", visible ? "false" : "true");
+        els.youtubeAudioToggle.textContent = state.youtubeMuted ? "Activar sonido" : "Silenciar YouTube";
+        els.youtubeAudioToggle.classList.toggle("is-focused", visible);
     }
 
     function loadEpgCache() {

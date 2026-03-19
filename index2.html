@@ -17,11 +17,47 @@
         </div>
     </div>
 
+    <section id="startup-overlay" class="startup-overlay" aria-hidden="true">
+        <div class="startup-overlay__backdrop"></div>
+        <div class="startup-overlay__card">
+            <div class="startup-overlay__copy">
+                <img src="files/logo.png" alt="10TV" class="startup-overlay__logo" onerror="this.style.display='none'">
+                <span class="startup-overlay__eyebrow">Inicio</span>
+                <h2 id="startup-title">Actualizacion disponible</h2>
+                <p id="startup-message">Revisa tu version antes de entrar. Puedes actualizar ahora o cerrar este aviso para seguir.</p>
+            </div>
+
+            <div class="startup-overlay__qr-block">
+                <div class="startup-overlay__qr-frame">
+                    <img id="startup-qr-image" class="startup-overlay__qr-image" src="" alt="QR Telegram">
+                    <div id="startup-qr-fallback" class="startup-overlay__qr-fallback">
+                        <strong>QR pendiente</strong>
+                        <span>Reemplaza la imagen cuando tengas tu codigo.</span>
+                    </div>
+                </div>
+                <div class="startup-overlay__qr-text">
+                    <strong id="startup-telegram-title">Canal de Telegram</strong>
+                    <p id="startup-telegram-message">Deja aqui tu QR para que los usuarios entren directo a tu comunidad.</p>
+                </div>
+            </div>
+
+            <div class="startup-overlay__actions">
+                <button id="startup-update" class="startup-overlay__button startup-overlay__button--primary" type="button">Actualizar</button>
+                <button id="startup-close" class="startup-overlay__button startup-overlay__button--secondary" type="button">Cerrar</button>
+            </div>
+        </div>
+    </section>
+
     <main class="app-shell">
         <section class="player-stage">
             <video id="player" playsinline muted></video>
             <iframe id="yt-player" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen frameborder="0" title="YouTube player"></iframe>
             <div class="player-stage__scrim"></div>
+        </section>
+
+        <section id="player-controls" class="player-controls" aria-hidden="true">
+            <button id="youtube-audio-toggle" class="player-controls__button" type="button">Activar sonido</button>
+            <span class="player-controls__hint">Enter cambia sonido | Derecha abre menu</span>
         </section>
 
         <section id="interaction-overlay" class="interaction-overlay" aria-hidden="true">
@@ -115,6 +151,7 @@
 
     <script src="js/index2.channels.js"></script>
     <script src="js/index2.epg.js"></script>
+    <script src="js/index2.config.js"></script>
     <script src="js/index2.app.js"></script>
 </body>
 </html>

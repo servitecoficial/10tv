@@ -1,0 +1,16 @@
+Convierte canales.txt al formato M3U que usa index2.
+
+Comando:
+node scripts/convert_canales_to_m3u.js canales.txt files/canales-convertido.m3u
+
+Tambien puedes convertir otro archivo:
+node scripts/convert_canales_to_m3u.js ruta\\entrada.txt ruta\\salida.m3u
+
+Que hace:
+- Lee lineas tipo ext,nombre,url
+- Lee lineas tipo codigo,nombre,url
+- Respeta los bloques group,NOMBRE
+- Genera lineas #EXTINF compatibles con el parser de index2
+
+Archivo de ejemplo ya convertido:
+files/colombia-convertido.m3u

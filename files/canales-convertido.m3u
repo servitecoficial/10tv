@@ -1,0 +1,781 @@
+#EXTM3U
+#EXTINF:-1 tvg-name="LISTA GRATIS GRUPO : DE TODO EN IPTV LATINO" group-title="VARIOS" source-tag="ext",LISTA GRATIS GRUPO : DE TODO EN IPTV LATINO
+http://controlstreams.com:1935/tves2/tves2/chunklist_w1083729129.m3u8
+#EXTINF:-1 tvg-name="LISTA GRATUITA PARA EL GRUPO EN FACEBOOK  : DE TODO EN IPTV LATINO" group-title="VARIOS" source-tag="ext",LISTA GRATUITA PARA EL GRUPO EN FACEBOOK  : DE TODO EN IPTV LATINO
+http://controlstreams.com:1935/tves2/tves2/chunklist_w1083729129.m3u8
+#EXTINF:-1 tvg-name="hbo2 dual (eng esp)" group-title="VARIOS" source-tag="ext",hbo2 dual (eng esp)
+http://161.0.157.5/PLTV/88888888/224/3221227026/index.m3u8
+#EXTINF:-1 tvg-name="Fox Cinema" group-title="CINE" source-tag="FoxCinema.cl",Fox Cinema
+http://161.0.157.7/PLTV/88888888/224/3221226793/03.m3u8
+#EXTINF:-1 tvg-name="HBO 2" group-title="CINE" source-tag="HBO2.cl",HBO 2
+http://161.0.157.5/PLTV/88888888/224/3221227026/03.m3u8
+#EXTINF:-1 tvg-name="Fox Cinema" group-title="CINE" source-tag="FoxCinema.cl",Fox Cinema
+http://161.0.157.7/PLTV/88888888/224/3221226793/03.m3u8
+#EXTINF:-1 tvg-name="HBO 2" group-title="CINE" source-tag="HBO2.cl",HBO 2
+http://161.0.157.5/PLTV/88888888/224/3221227026/03.m3u8
+#EXTINF:-1 tvg-name="CARTOON NETWORK" group-title="CINE" source-tag="CartoonNetwork.cl",CARTOON NETWORK
+http://161.0.157.9/PLTV/88888888/224/3221226843/index.m3u8
+#EXTINF:-1 tvg-name="MAXPRIME" group-title="CINE" source-tag="ext",MAXPRIME
+http://161.0.157.9/PLTV/88888888/224/3221226834/index.m3u8
+#EXTINF:-1 tvg-name="fox premium comedy (eng)" group-title="CINE" source-tag="ext",fox premium comedy (eng)
+http://161.0.157.9/PLTV/88888888/224/3221226800/index.m3u8
+#EXTINF:-1 tvg-name="ESPN 2" group-title="CINE" source-tag="ESPN2.mx",ESPN 2
+http://161.0.157.9/PLTV/88888888/224/3221226881/index.m3u8
+#EXTINF:-1 tvg-name="Animal Planet" group-title="CINE" source-tag="AnimalPlanet.cl",Animal Planet
+http://161.0.157.5/PLTV/88888888/224/3221226253/index.m3u8
+#EXTINF:-1 tvg-name="Red Mas" group-title="COLOMBIA" source-tag="ext",Red Mas
+http://infored.lcdn.claro.net.co/Content/hls_clear/live/Channel(REDTVHD)/index.m3u8
+#EXTINF:-1 tvg-name="RCN2 HD" group-title="COLOMBIA" source-tag="ext",RCN2 HD
+https://rcnhd.cdn.net.co/live02/rcnhd2_720p.m3u8
+#EXTINF:-1 tvg-name="NTN24" group-title="COLOMBIA" source-tag="NTN24.us",NTN24
+https://rcnhd.cdn.net.co/live04/ntn24_480p.m3u8
+#EXTINF:-1 tvg-name="RCN" group-title="COLOMBIA" source-tag="ext",RCN
+https://rcnhd.cdn.net.co/live01/rcnhd.m3u8
+#EXTINF:-1 tvg-name="RCN2 HD" group-title="COLOMBIA" source-tag="ext",RCN2 HD
+https://rcnhd.cdn.net.co/live02/rcnhd2_720p.m3u8
+#EXTINF:-1 tvg-name="NTN24" group-title="COLOMBIA" source-tag="NTN24.us",NTN24
+https://rcnhd.cdn.net.co/live04/ntn24_480p.m3u8
+#EXTINF:-1 tvg-name="Red Mas" group-title="COLOMBIA" source-tag="ext",Red Mas
+http://infored.lcdn.claro.net.co/Content/hls_clear/live/Channel(REDTVHD)/index.m3u8
+#EXTINF:-1 tvg-name="Canal Capital HD" group-title="COLOMBIA" source-tag="ext",Canal Capital HD
+https://mdstrm.com/live-stream-playlist/57d01d6c28b263eb73b59a5a.m3u8
+#EXTINF:-1 tvg-name="RCN" group-title="COLOMBIA" source-tag="ext",RCN
+https://rcnhd.cdn.net.co/live01/rcnhd_720p.m3u8
+#EXTINF:-1 tvg-name="Senal Colombia" group-title="COLOMBIA" source-tag="ext",Senal Colombia
+http://live10.cdnmedia.tv/rtvcscolombialive/smil:live.smil/master.m3u8
+#EXTINF:-1 tvg-name="Telemedellin" group-title="COLOMBIA" source-tag="ext",Telemedellin
+http://api.new.livestream.com/accounts/4608897/events/7111788/live.m3u8
+#EXTINF:-1 tvg-name="Cable Noticias" group-title="COLOMBIA" source-tag="ext",Cable Noticias
+http://cnmedia.eastus2.cloudapp.azure.com:1935/live/cablenoticiastv_360p/chunklist_w287478439.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Telecaribe" group-title="COLOMBIA" source-tag="ext",Telecaribe
+http://telecaribe-hd.gcdn.anvato.net/hls/live/telecaribehd/2196k/index.m3u8
+#EXTINF:-1 tvg-name="PortalFoxMix Tv HD" group-title="MUSICA" source-tag="ext",PortalFoxMix Tv HD
+http://149.56.17.92:1935/portalfoxmix/_definst_/portalfoxmix/playlist.m3u8
+#EXTINF:-1 tvg-name="La Mega Mundial HD" group-title="MUSICA" source-tag="ext",La Mega Mundial HD
+http://68.235.35.243:1935/lamegamundial/lamegamundial2/playlist.m3u8
+#EXTINF:-1 tvg-name="Music Top HD" group-title="MUSICA" source-tag="ext",Music Top HD
+http://live-edge01.telecentro.net.ar/live/smil:musictop.smil/chunklist_w1038427347_b2028000_sleng.m3u8
+#EXTINF:-1 tvg-name="Frecuencia Musical Tv" group-title="MUSICA" source-tag="ext",Frecuencia Musical Tv
+http://streaminglivehd.com:1935/8056/8056/playlist.m3u8
+#EXTINF:-1 tvg-name="Pandero Music Chile" group-title="MUSICA" source-tag="ext",Pandero Music Chile
+http://evo.eltelon.com:1935/panderocl/smil:panderocl.smil/chunklist_w229718808_b1936705.m3u8
+#EXTINF:-1 tvg-name="VOX Valparaiso" group-title="MUSICA" source-tag="ext",VOX Valparaiso
+http://movilstream.digitalproserver.com/vox/voxvivo/livestream2/playlist.m3u8
+#EXTINF:-1 tvg-name="MTV USA" group-title="MUSICA" source-tag="ext",MTV USA
+http://unilivemtveu-lh.akamaihd.net/i/mtvno_1master.m3u8
+#EXTINF:-1 tvg-name="Oldies Hits" group-title="MUSICA" source-tag="ext",Oldies Hits
+http://inliveserver.com:1935/8012/8012/chunklist_w2106861196.m3u8
+#EXTINF:-1 tvg-name="Retro Tv" group-title="MUSICA" source-tag="retro",Retro Tv
+http://stream.mediawork.cz/retrotv/retrotvHQ1/chunklist_w627639048.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="RetroTV" group-title="MUSICA" source-tag="ext",RetroTV
+http://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8
+#EXTINF:-1 tvg-name="Radio Italia Vision" group-title="MUSICA" source-tag="ext",Radio Italia Vision
+http://livetr.teleromagna.it/lifestyle/live/playlist.m3u8
+#EXTINF:-1 tvg-name="California Music Channel" group-title="MUSICA" source-tag="ext",California Music Channel
+http://cmctv.ios.internapcdn.net/cmctv_vitalstream_com/live_1/CMCUSA/CCURstream0.m3u8
+#EXTINF:-1 tvg-name="Pandero Music" group-title="MUSICA" source-tag="ext",Pandero Music
+http://evo.eltelon.com:1935/panderotop/smil:panderotop.smil/chunklist_w693853185_b1500000_sleng.m3u8
+#EXTINF:-1 tvg-name="Dream Tv" group-title="MUSICA" source-tag="DreamTV.tr",Dream Tv
+http://live.netd.com.tr/S1/HLS_LIVE/dreamtv/1000/prog_index.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="M2o Tv" group-title="MUSICA" source-tag="ext",M2o Tv
+http://m2otv-lh.akamaihd.net/i/m2oTv_1index_600_av-b.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="GO RT" group-title="MUSICA" source-tag="ext",GO RT
+http://593aed234297b.streamlock.net:1935/gotvsjoerd/gotvsjoerd/playlist.m3u8
+#EXTINF:-1 tvg-name="Melody Channel HD" group-title="MUSICA" source-tag="ext",Melody Channel HD
+http://186.155.200.118:1935/live/MelodyChannel/playlist.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="MZ Muzzone" group-title="MUSICA" source-tag="ext",MZ Muzzone
+http://live.muzzone.cdnvideo.ru/muzzone/muzzone.sdp/playlist.m3u8
+#EXTINF:-1 tvg-name="NRJ HITS TV Live" group-title="MUSICA" source-tag="ext",NRJ HITS TV Live
+http://5.196.138.6:1935/live/nrjbelgique_720p/chunklist_w1562122761.m3u8
+#EXTINF:-1 tvg-name="Xite" group-title="MUSICA" source-tag="XITE.nl",Xite
+http://highvolume03.streampartner.nl/vleugels_hd6/livestream/chunklist.m3u8
+#EXTINF:-1 tvg-name="CHAU Tv" group-title="MUSICA" source-tag="ext",CHAU Tv
+http://video.chaula.tv/hls/live/high/playlist_high.m3u8
+#EXTINF:-1 tvg-name="Radio 105 Tv" group-title="MUSICA" source-tag="RTL102.5TV.it",Radio 105 Tv
+http://fms.105.net:1935/live/105Test1/playlist.m3u8
+#EXTINF:-1 tvg-name="CMC" group-title="MUSICA" source-tag="CMC.hr",CMC
+http://cmctv.ios.internapcdn.net/cmctv_vitalstream_com/live_1/CMC-TV/CCURstream.m3u8
+#EXTINF:-1 tvg-name="CMC USA" group-title="MUSICA" source-tag="ext",CMC USA
+http://cmctv.ios.internapcdn.net/cmctv_vitalstream_com/live_1/CMCUSA/CCURstream0.m3u8
+#EXTINF:-1 tvg-name="FS1" group-title="MUSICA" source-tag="FOXSports1.us",FS1
+http://stream.fs1.tv:8080/hls/webstream.m3u8
+#EXTINF:-1 tvg-name="RUTV" group-title="MUSICA" source-tag="rutv",RUTV
+https://rutv.gcdn.co/streams/1410_95/720n/index.m3u8
+#EXTINF:-1 tvg-name="The Country Network" group-title="MUSICA" source-tag="ext",The Country Network
+https://dcunilive2-lh.akamaihd.net/i/dclive_1master.m3u8
+#EXTINF:-1 tvg-name="Djing Animation" group-title="MUSICA" source-tag="ext",Djing Animation
+http://www.djing.com/tv/animation.m3u8
+#EXTINF:-1 tvg-name="Djing Classic" group-title="MUSICA" source-tag="ext",Djing Classic
+http://www.djing.com/tv/hits.m3u8
+#EXTINF:-1 tvg-name="Djing Electro Rock" group-title="MUSICA" source-tag="ext",Djing Electro Rock
+http://www.djing.com/tv/session_electro-rock.m3u8
+#EXTINF:-1 tvg-name="Djing French touch" group-title="MUSICA" source-tag="ext",Djing French touch
+http://www.djing.com/tv/session_french-touch.m3u8
+#EXTINF:-1 tvg-name="Djing Ibiza" group-title="MUSICA" source-tag="ext",Djing Ibiza
+http://www.djing.com/tv/dancefloor.m3u8
+#EXTINF:-1 tvg-name="Djing Karaoke" group-title="MUSICA" source-tag="ext",Djing Karaoke
+http://www.djing.com/tv/karaoke.m3u8
+#EXTINF:-1 tvg-name="Djing Summer Vibes" group-title="MUSICA" source-tag="ext",Djing Summer Vibes
+http://www.djing.com/tv/session_summer-vibes.m3u8
+#EXTINF:-1 tvg-name="Djing TV" group-title="MUSICA" source-tag="ext",Djing TV
+http://www.djing.com/tv/live.m3u8
+#EXTINF:-1 tvg-name="Djing Underground" group-title="MUSICA" source-tag="ext",Djing Underground
+http://www.djing.com/tv/underground.m3u8
+#EXTINF:-1 tvg-name="Music Choice" group-title="MUSICA" source-tag="ext",Music Choice
+http://edge.music-choice-play-chaina1.top.comcast.net/PlayMetadataInserter/play/chunklist.m3u8
+#EXTINF:-1 tvg-name="Metal TV" group-title="MUSICA" source-tag="ext",Metal TV
+http://autopilot.myowntv.org/content/33816/index.m3u8
+#EXTINF:-1 tvg-name="Mezzo" group-title="MUSICA" source-tag="mezzo",Mezzo
+http://ott-cdn.ucom.am/s35/index.m3u8
+#EXTINF:-1 tvg-name="Mezzo" group-title="MUSICA" source-tag="mezzo",Mezzo
+http://auth.tvtune.net/s/55/1/auto/OHdJTGRDL2VvMXZRSExjbHVIL2R5VGdrLzFTY3JWdDN5dC9Bb282MDdZRkMwOVFYblBQM2w5OFprRGdNdVBSQVJLd1IzMEE9/playlist.m3u8
+#EXTINF:-1 tvg-name="La Mega Mundial (EU)" group-title="MUSICA" source-tag="ext",La Mega Mundial (EU)
+http://68.235.35.243:1935/lamegamundial/lamegamundial2/playlist.m3u8
+#EXTINF:-1 tvg-name="Melody Channel (EU)" group-title="MUSICA" source-tag="ext",Melody Channel (EU)
+http://186.155.200.118:1935/live/MelodyChannel/playlist.m3u8
+#EXTINF:-1 tvg-name="Music Top (Argentina)" group-title="MUSICA" source-tag="ext",Music Top (Argentina)
+http://live-edge01.telecentro.net.ar/live/msctphd-720/playlist.m3u8
+#EXTINF:-1 tvg-name="ARGENTINA:Canal 26" group-title="MUSICA" source-tag="ext",ARGENTINA:Canal 26
+http://200.115.193.177/live/26hd-720/.m3u8
+#EXTINF:-1 tvg-name="Carolina TV (Chile)" group-title="MUSICA" source-tag="ext",Carolina TV (Chile)
+http://unlimited1-us.dps.live/carolinatv/carolinatv.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="Holvoet TV Chile" group-title="MUSICA" source-tag="ext",Holvoet TV Chile
+http://unlimited6-cl.dps.live/holvoettv/holvoettv.smil/holvoettv/livestream1/chunks.m3u8
+#EXTINF:-1 tvg-name="Latinos:TV Chile" group-title="MUSICA" source-tag="ext",Latinos:TV Chile
+http://c13-ply.janus.cl/playlist/stream.m3u8?s=c13hd
+#EXTINF:-1 tvg-name="PortalFoxMix Tv" group-title="MUSICA" source-tag="ext",PortalFoxMix Tv
+http://tv.portalfoxmix.club:1935/portalfoxmix/portalfoxmix/playlist.m3u8?JoCaRoIPTV.m3u8
+#EXTINF:-1 tvg-name="RADIO 105 TV" group-title="MUSICA" source-tag="RTL102.5TV.it",RADIO 105 TV
+http://fms.105.net:1935/live/105Test1/livestream.m3u8?JoCaRoIPTV.m3u8
+#EXTINF:-1 tvg-name="TLX" group-title="MUSICA" source-tag="ext",TLX
+http://live-edge01.telecentro.net.ar/live/smil:tlx.smil/chunklist_w1527043435_b1828000_sleng.m3u8?
+#EXTINF:-1 tvg-name="Real Madrid TV HD" group-title="MUSICA" source-tag="RealMadridTV.sp",Real Madrid TV HD
+http://rmtvlive-lh.akamaihd.net/i/rmtv_1index_1000_av-p.m3u8?sd=10&rebase=on?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Sevilla Futbol Club TV" group-title="MUSICA" source-tag="ext",Sevilla Futbol Club TV
+http://sevillafc_live-lh.akamaihd.net/i/video_0master.m3u8
+#EXTINF:-1 tvg-name="Canal Extremadura" group-title="SPAIN" source-tag="CanalExtremadura.es",Canal Extremadura
+http://hlstv.canalextremadura.es/livetv/smil:multistream.smil/chunklist_b1596000_DVR.m3u8
+#EXTINF:-1 tvg-name="3/24" group-title="SPAIN" source-tag="324.es",3/24
+http://ccma-tva-int-abertis-live.hls.adaptive.level3.net/int/ngrp:324_mobil/chunklist_b548000.m3u8
+#EXTINF:-1 tvg-name="EITB 1" group-title="SPAIN" source-tag="ext",EITB 1
+https://etbvnogeo-lh.akamaihd.net/i/ETBSTR1_1index_2596_av-p.m3u8
+#EXTINF:-1 tvg-name="EITB 2" group-title="SPAIN" source-tag="ext",EITB 2
+https://etbvnogeo-lh.akamaihd.net/i/ETBSTR2_1index_2596_av-p.m3u8
+#EXTINF:-1 tvg-name="EITB 3" group-title="SPAIN" source-tag="ext",EITB 3
+https://etbvnogeo-lh.akamaihd.net/i/ETBEITBEUS_1index_0748_av-p.m3u8
+#EXTINF:-1 tvg-name="7 Murcia" group-title="SPAIN" source-tag="ext",7 Murcia
+http://rtvmurcia_01-lh.akamaihd.net/i/rtvmurcia_1_0master.m3u8
+#EXTINF:-1 tvg-name="Calle 13" group-title="SPAIN" source-tag="Calle13.sp",Calle 13
+http://streaming.enetres.net:80/091DB7AFBD77442B9BA2F141DCC182F5021/mobile/chunklist.m3u8
+#EXTINF:-1 tvg-name="13 Tv" group-title="SPAIN" source-tag="13tv.es",13 Tv
+http://streaming.enetres.net:1935/091DB7AFBD77442B9BA2F141DCC182F5021/live.smil/stream.m3u8
+#EXTINF:-1 tvg-name="Energy" group-title="SPAIN" source-tag="Energy.es",Energy
+https://mdslivehlsb-i.akamaihd.net/hls/live/623617/energy/bitrate_1.m3u8
+#EXTINF:-1 tvg-name="BeMad" group-title="SPAIN" source-tag="ext",BeMad
+https://mdslivehlsb-i.akamaihd.net/hls/live/623615/bemad/bitrate_4.m3u8
+#EXTINF:-1 tvg-name="FDF" group-title="SPAIN" source-tag="FDF.sp",FDF
+https://mdslivehls-i.akamaihd.net/hls/live/571650/fdf/bitrate_3.m3u8
+#EXTINF:-1 tvg-name="Divinity" group-title="SPAIN" source-tag="Divinity.es",Divinity
+http://mdslivehls-i.akamaihd.net/hls/live/571648/divinity/bitrate_3.m3u8
+#EXTINF:-1 tvg-name="La 1" group-title="SPAIN" source-tag="LA1.es",La 1
+http://rtvev4-live.hss.adaptive.level3.net/egress/ahandler/rtvegl7/la1_lv3_aosv4_gl7/la1_lv3_aosv4_gl7.isml/la1_lv3_aosv4_gl7-audio=128000-video=1500000.m3u8
+#EXTINF:-1 tvg-name="OchoTV Guadalajara" group-title="MEXICO" source-tag="ext",OchoTV Guadalajara
+http://bcliveuniv-lh.akamaihd.net/i/Live_1master.m3u8
+#EXTINF:-1 tvg-name="RCG 1 Saltillo" group-title="MEXICO" source-tag="ext",RCG 1 Saltillo
+http://wowzacontrol.com:1935/stream34/stream34/playlist.m3u8
+#EXTINF:-1 tvg-name="RCG 2 Saltillo" group-title="MEXICO" source-tag="ext",RCG 2 Saltillo
+http://wowzacontrol.com:1936/stream23/stream23/playlist.m3u8
+#EXTINF:-1 tvg-name="RCG 3 Saltillo" group-title="MEXICO" source-tag="ext",RCG 3 Saltillo
+http://wowzacontrol.com:1936/stream56/stream56/playlist.m3u8
+#EXTINF:-1 tvg-name="RTG Guerrero" group-title="MEXICO" source-tag="ext",RTG Guerrero
+http://50.7.98.234:1935/5936soyguerrero/guerrerovideo/playlist.m3u8
+#EXTINF:-1 tvg-name="RTQ Queretaro" group-title="MEXICO" source-tag="ext",RTQ Queretaro
+http://wms.tecnoxia.com:1935/rytqrolive/rytqrolive/master.m3u8
+#EXTINF:-1 tvg-name="Telemar Campeche" group-title="MEXICO" source-tag="ext",Telemar Campeche
+http://wms.tecnoxia.com:1935/8006/8006/playlist.m3u8
+#EXTINF:-1 tvg-name="SipseTv Cancun" group-title="MEXICO" source-tag="ext",SipseTv Cancun
+https://webprod.sipse.com.mx:8080/show/tvcun.m3u8
+#EXTINF:-1 tvg-name="Canal 10 Cancun" group-title="MEXICO" source-tag="ext",Canal 10 Cancun
+http://stream2.dynalias.com:1935/live/tvlive1/playlist.m3u8
+#EXTINF:-1 tvg-name="Canal del Congreso" group-title="MEXICO" source-tag="ext",Canal del Congreso
+http://live10.cdnmedia.tv/cngmexicolive/smil:diputados1.smil/chunklist_b500000.m3u8
+#EXTINF:-1 tvg-name="Canal Judicial" group-title="MEXICO" source-tag="avi",Canal Judicial
+http://dl-scjn.scjn.gob.mx/scjn/scjn.mp4/playlist.m3u8
+#EXTINF:-1 tvg-name="Canal Once" group-title="MEXICO" source-tag="OnceTV.mx",Canal Once
+http://live.canaloncelive.tv:1935/livepkgr2/smil:internacional.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="Multimedios Monterrey" group-title="MEXICO" source-tag="MultimediosMonterrey.mx",Multimedios Monterrey
+http://mdstrm.com/live-stream-playlist/57b4dbf5dbbfc8f16bb63ce1.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Multimedios" group-title="MEXICO" source-tag="MultimediosMonterrey.mx",Multimedios
+http://mdstrm.com/live-stream-playlist/57bf686a61ff39e1085d43e1.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Multimedios" group-title="MEXICO" source-tag="MultimediosMonterrey.mx",Multimedios
+http://mdstrm.com/live-stream-playlist/57b4db886338448314449cfa.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Ocho Tv" group-title="MEXICO" source-tag="ext",Ocho Tv
+http://bcliveuniv-lh.akamaihd.net/i/Live_1index_2200_av-p.m3u8?sd=10&rebase=on
+#EXTINF:-1 tvg-name="Efekto Tv HD" group-title="MEXICO" source-tag="ext",Efekto Tv HD
+http://grupomac-lh.akamaihd.net:80/i/004rss0k8_1index_1_av-p.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Efekto Tv SD" group-title="MEXICO" source-tag="ext",Efekto Tv SD
+http://grupomac-lh.akamaihd.net:80/i/004rss0k8_1index_3_av-p.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Aprende TV Mexico City" group-title="MEXICO" source-tag="ext",Aprende TV Mexico City
+http://live10.cdnmedia.tv/dgtvelive/smil:aprend24.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="Capital 21 Mexico City" group-title="MEXICO" source-tag="ext",Capital 21 Mexico City
+http://wowzaprod158-i.akamaihd.net/hls/live/595142/a9251b55/playlist.m3u8?set-akamai-hls-revision=5&set-cc-attribute=cc
+#EXTINF:-1 tvg-name="Tv Peru" group-title="PERU" source-tag="TVPeru.pe",Tv Peru
+https://cdnh4.iblups.com/hls/R9WtilpKKB.m3u8
+#EXTINF:-1 tvg-name="Antares TV" group-title="PERU" source-tag="ext",Antares TV
+http://173.192.105.252:1935/iptvantares/liveantarestv/playlist.m3u8
+#EXTINF:-1 tvg-name="Monterrico TV" group-title="PERU" source-tag="ext",Monterrico TV
+http://vs8.live.opencaster.com/20100152275/jcpstream/playlist.m3u8
+#EXTINF:-1 tvg-name="Sol TV" group-title="PERU" source-tag="ext",Sol TV
+http://wowzaserver.net:1935/vivo21/vivo21/playlist.m3u8
+#EXTINF:-1 tvg-name="Ovacion" group-title="PERU" source-tag="ext",Ovacion
+http://cdn2.ujjina.com:1935/iptvovacion1/liveovacion1tv/playlist.m3u8
+#EXTINF:-1 tvg-name="Central TV Perú" group-title="PERU" source-tag="ext",Central TV Perú
+http://cdn2.ujjina.com:1935/iptvcentraltv/livecentraltvtv/playlist.m3u8
+#EXTINF:-1 tvg-name="TV Noticias 7.3" group-title="PERU" source-tag="ext",TV Noticias 7.3
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIPE0002&mode=12
+#EXTINF:-1 tvg-name="RBC TV" group-title="PERU" source-tag="rbk",RBC TV
+http://184.154.28.210:1935/rbc-tv/rbc-tv/playlist.m3u8
+#EXTINF:-1 tvg-name="CTC TV Cusco" group-title="PERU" source-tag="ext",CTC TV Cusco
+http://livestreamingperu.com:1935/ctctv/ctctv/chunklist.m3u8
+#EXTINF:-1 tvg-name="Cultura 24" group-title="PERU" source-tag="ext",Cultura 24
+http://vs8.live.opencaster.com/cultura24/smil:cultura24/chunklist_w1710773429_b564000_sles.m3u8
+#EXTINF:-1 tvg-name="Mega TV Araquipa" group-title="PERU" source-tag="ext",Mega TV Araquipa
+http://play.hostreamperu.com:1935/8016/8016/playlist.m3u8
+#EXTINF:-1 tvg-name="Canal BHtv" group-title="PERU" source-tag="ext",Canal BHtv
+http://cdn2.ujjina.com:1935/iptvbhtv/livebhtvtv/playlist.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Canal 9 Salta" group-title="ARGENTINA" source-tag="ext",Canal 9 Salta
+http://panel.dattalive.com:1935/8250/8250/playlist.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="TLX" group-title="ARGENTINA" source-tag="ext",TLX
+http://live-edge01.telecentro.net.ar/live/smil:tlx.smil/chunklist_w1527043435_b1828000_sleng.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Canal 2 Telpin Tv" group-title="ARGENTINA" source-tag="ext",Canal 2 Telpin Tv
+http://wowza.telpin.com.ar:1935/telpintv/ttv.stream_720p/playlist.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Canal Provincial" group-title="ARGENTINA" source-tag="ext",Canal Provincial
+http://www.trimi.com.ar/provincial/streaming/mystream.m3u8
+#EXTINF:-1 tvg-name="Litus Tv" group-title="ARGENTINA" source-tag="ext",Litus Tv
+http://192.99.38.174:1935/litustv/ngrp:litustv_all/playlist.m3u8
+#EXTINF:-1 tvg-name="247 Noticias" group-title="ARGENTINA" source-tag="ext",247 Noticias
+http://59c5c86e10038.streamlock.net:1935/6605140/6605140/playlist.m3u8
+#EXTINF:-1 tvg-name="Multivision" group-title="ARGENTINA" source-tag="ext",Multivision
+http://panel.dattalive.com:1935/8250/8250/chunklist_w689217833.m3u8
+#EXTINF:-1 tvg-name="TEC Tv" group-title="ARGENTINA" source-tag="ext",TEC Tv
+http://tec_tv.secure2.footprint.net/egress/bhandler/streamroot_lsd2latam/tec_tv/manifest.m3u8
+#EXTINF:-1 tvg-name="Uniteve Villa Amria" group-title="ARGENTINA" source-tag="ext",Uniteve Villa Amria
+http://stmv1.questreaming.com/uniteve/uniteve/playlist.m3u8?wowzasessionid=1242977139
+#EXTINF:-1 tvg-name="Canal 26 1" group-title="ARGENTINA" source-tag="ext",Canal 26 1
+http://200.115.193.177/live/26hd-480/.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Canal 26 2" group-title="ARGENTINA" source-tag="ext",Canal 26 2
+http://live-edge01.telecentro.net.ar/live/smil:c26.smil/chunklist_w188793591_b1864000_sleng.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Canal 26 3" group-title="ARGENTINA" source-tag="ext",Canal 26 3
+http://live-edge01.telecentro.net.ar/live/smil:c26.smil/chunklist_w1700708876_b1264000_sleng.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Canal 11 Ushuaia" group-title="ARGENTINA" source-tag="ext",Canal 11 Ushuaia
+https://stream.solumedia.com.ar/c11/myStream/playlist.m3u8
+#EXTINF:-1 tvg-name="Net Tv" group-title="ARGENTINA" source-tag="NETtv.svn",Net Tv
+https://unlimited2-cl.dps.live/nettv/nettv.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="13 Max HD" group-title="ARGENTINA" source-tag="ext",13 Max HD
+http://coninfo.net:1935/13maxhd/live_720p/master.m3u8
+#EXTINF:-1 tvg-name="TVN SERVICIOS 5" group-title="CHILE" source-tag="ext",TVN SERVICIOS 5
+http://mdstrm.com/live-stream-playlist/5653641561b4eba30a7e4929.m3u8
+#EXTINF:-1 tvg-name="La Cuarta" group-title="CHILE" source-tag="ext",La Cuarta
+http://unlimited6-cl.dps.live/l4tv/l4tv.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="Emol TV" group-title="CHILE" source-tag="ext",Emol TV
+https://streaming.ecn.cl/hls/vivo2hd_hi/index.m3u8
+#EXTINF:-1 tvg-name="Emol TV 2" group-title="CHILE" source-tag="ext",Emol TV 2
+https://streaming.ecn.cl/hls/vivohd_lo/index.m3u8
+#EXTINF:-1 tvg-name="Trailer Tv" group-title="CHILE" source-tag="ext",Trailer Tv
+http://evo.eltelon.com:1935/trailertv/smil:trailertv.smil/playlist.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Tv Senado 1 HD" group-title="CHILE" source-tag="ext",Tv Senado 1 HD
+http://janus-tv-ply.senado.cl/playlist/stream.m3u8?s=tvsenado-hd
+#EXTINF:-1 tvg-name="VC Online HD" group-title="CHILE" source-tag="ext",VC Online HD
+https://593b04c4c5670.streamlock.net/8068/8068/chunklist_w2070277572.m3u8
+#EXTINF:-1 tvg-name="31 Tendencias Prime" group-title="CHILE" source-tag="ext",31 Tendencias Prime
+https://v3.tustreaming.cl/tendenciastv/live1/index.m3u8
+#EXTINF:-1 tvg-name="Maxima Tv HD" group-title="CHILE" source-tag="ext",Maxima Tv HD
+http://190.107.176.55:1935/live/maxima-fm/playlist.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Canal 13 Movil" group-title="CHILE" source-tag="ext",Canal 13 Movil
+http://c13-ply.janus.cl/playlist/stream.m3u8?s=c13hd
+#EXTINF:-1 tvg-name="No name" group-title="CHILE" source-tag="ext",No name
+http://unlimited1-cl.dps.live/cnn/cnn.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="La Red" group-title="CHILE" source-tag="Lared.cl",La Red
+https://d28d7tc1ojykcy.cloudfront.net/lared/smil:lared.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="Mega HD" group-title="CHILE" source-tag="stb",Mega HD
+https://mdstrm.com/live-stream-playlist/53d2c1a32640614e62a0e000.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Latinos UP Tv" group-title="LATINOS" source-tag="ext",Latinos UP Tv
+https://5b38ce71f1f00.streamlock.net/8080/8080/chunklist_w6042364.m3u8
+#EXTINF:-1 tvg-name="No name" group-title="LATINOS" source-tag="ext",No name
+https://secure-streams.akamaized.net/rt-esp/index.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="DW Latino" group-title="NOTICIAS" source-tag="Deutschewelle.br",DW Latino
+http://dwstream3-lh.akamaihd.net/i/dwstream3_liveindex_5_av-p.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="CGTN 1" group-title="NOTICIAS" source-tag="ext",CGTN 1
+https://livees.cgtn.com/1000e/prog_index.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="CGTN 2" group-title="NOTICIAS" source-tag="ext",CGTN 2
+http://live.cgtn.com/cctv-e.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="CNN Turkia" group-title="NOTICIAS" source-tag="ext",CNN Turkia
+http://media.netd.com.tr/S1/HLS_LIVE/cnn_turk/1000/prog_index.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="HispanTV" group-title="NOTICIAS" source-tag="ext",HispanTV
+https://5a61de8ed719d.streamlock.net/live/smil:live.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="Travel HD" group-title="CULTURA" source-tag="travel",Travel HD
+http://31.13.223.104:1935/travel/community.stream/playlist.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="NASA Space Station 1" group-title="CULTURA" source-tag="ext",NASA Space Station 1
+http://iphone-streaming.ustream.tv/uhls/17074538/streams/live/iphone/playlist.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="NASA Space Station 2" group-title="CULTURA" source-tag="ext",NASA Space Station 2
+http://iphone-streaming.ustream.tv/uhls/9408562/streams/live/iphone/playlist.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Silence TV" group-title="CULTURA" source-tag="silence-tv",Silence TV
+http://109.236.85.100:8081/sipTV/live/playlist.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Fashion Tv" group-title="MODA" source-tag="FashionTV.nws",Fashion Tv
+http://fash1043.cloudycdn.services/slive/_definst_/ftv_paris_adaptive.smil/chunklist.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="HD Fashion" group-title="MODA" source-tag="hd-fashion",HD Fashion
+http://95.67.47.115/hls/hdfashion_ua_hi/index.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Andalucia Cocina Tv" group-title="COCINA" source-tag="ext",Andalucia Cocina Tv
+https://593fa17dec176.streamlock.net:443/cscocina/cscocina.stream/playlist.m3u8
+#EXTINF:-1 tvg-name="Futbol en vivo 1" group-title="DEPORTES" source-tag="ext",Futbol en vivo 1
+http://cdn-hw.aliez.me/hls/streama79484/index.m3u8
+#EXTINF:-1 tvg-name="Telecaribe Deportes" group-title="DEPORTES" source-tag="ext",Telecaribe Deportes
+http://telecaribe-deportes.gcdn.anvato.net/hls/live/telecaribedeporteshd2/2196k/index.m3u8
+#EXTINF:-1 tvg-name="Bolivia Deportes" group-title="DEPORTES" source-tag="ext",Bolivia Deportes
+http://btvboliviatv.srfms.com:6568/live/livestream/playlist.m3u8
+#EXTINF:-1 tvg-name="Fight Time" group-title="DEPORTES" source-tag="ext",Fight Time
+http://node01.openfutbol.es/SVoriginOperatorEdge/128761.smil/.m3u8
+#EXTINF:-1 tvg-name="Fight Time" group-title="DEPORTES" source-tag="ext",Fight Time
+http://109.232.71.249/stream/stream_fighttime/fighttimehd.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Real Madrid TV HD" group-title="DEPORTES" source-tag="RealMadridTV.sp",Real Madrid TV HD
+http://rmtvlive-lh.akamaihd.net/i/rmtv_1index_1000_av-p.m3u8?sd=10&rebase=on?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Sevilla FC" group-title="DEPORTES" source-tag="ext",Sevilla FC
+http://sevillafc_live-lh.akamaihd.net/i/video_0index_0300_av-b.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="ESPN 2 USA" group-title="DEPORTES" source-tag="ESPN2.us",ESPN 2 USA
+http://161.0.157.9/PLTV/88888888/224/3221226881/index.m3u8
+#EXTINF:-1 tvg-name="Fox Sports Racing" group-title="DEPORTES" source-tag="FOXSportsRacing.ca",Fox Sports Racing
+http://161.0.157.8/PLTV/88888888/224/3221226181/index.m3u8
+#EXTINF:-1 tvg-name="Stadium Sports Network" group-title="DEPORTES" source-tag="ext",Stadium Sports Network
+https://d28avce4cnwu2y.cloudfront.net/v1/manifest/61a556f78e4547c8ab5c6297ea291d6350767ca2/Mux/37f5dd6d-5713-4998-8354-8c6675612b42/0.m3u8
+#EXTINF:-1 tvg-name="All Sports" group-title="DEPORTES" source-tag="ext",All Sports
+http://173.236.10.10:1935/dgrau/dgrau/playlist.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="MLB Network" group-title="DEPORTES" source-tag="MLBNetwork.us",MLB Network
+http://mlblive-akc.mlb.com/ls01/mlbam/mlb_network/NETWORK_LINEAR_1/master_mobile.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="SKY News" group-title="DEPORTES" source-tag="SkyNews.uk",SKY News
+http://skydvn-nowtv-atv-prod.skydvn.com/atv/skynews/1404/live/05.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Red Bull TV" group-title="DEPORTES" source-tag="ext",Red Bull TV
+https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_1660.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Dubai Sports" group-title="DEPORTES" source-tag="ext",Dubai Sports
+http://dmi.mangomolo.com:1935/dubaisports/smil:dubaisports.smil/master.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Abu Dhabi Sports" group-title="DEPORTES" source-tag="ext",Abu Dhabi Sports
+http://www.elahmad.com/tv/m3u8/adtv.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Abu Dhabi Sports SD" group-title="DEPORTES" source-tag="ext",Abu Dhabi Sports SD
+http://adtv.ercdn.net/adsport1/adsport1.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Abu Dhabi Sports SD*" group-title="DEPORTES" source-tag="ext",Abu Dhabi Sports SD*
+http://adtv.ercdn.net/adsport1/adsport1_480p.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Abu Dhabi Sports HD" group-title="DEPORTES" source-tag="ext",Abu Dhabi Sports HD
+http://adtv.ercdn.net/adsport1/adsport1_720p.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Abu Dhabi Sports 2" group-title="DEPORTES" source-tag="ADSports2.net",Abu Dhabi Sports 2
+http://www.elahmad.com/tv/m3u8/adtv.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Abu Dhabi Sports 2 SD" group-title="DEPORTES" source-tag="ADSports2.net",Abu Dhabi Sports 2 SD
+http://adtv.ercdn.net/adsport2/adsport2.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Abu Dhabi Sports 2 SD*" group-title="DEPORTES" source-tag="ADSports2.net",Abu Dhabi Sports 2 SD*
+http://adtv.ercdn.net/adsport2/adsport2_480p.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Abu Dhabi Sports 2 HD" group-title="DEPORTES" source-tag="ext",Abu Dhabi Sports 2 HD
+http://adtv.ercdn.net/adsport2/adsport2_720p.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Al Kass Sports" group-title="DEPORTES" source-tag="ext",Al Kass Sports
+http://www.elahmad.com/tv/m3u8/alkass.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Al Kass Sports 2" group-title="DEPORTES" source-tag="ext",Al Kass Sports 2
+http://www.elahmad.com/tv/m3u8/alkass.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Al Kass Sports 3" group-title="DEPORTES" source-tag="ext",Al Kass Sports 3
+http://www.elahmad.com/tv/m3u8/alkass.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Al Kass Sports 4" group-title="DEPORTES" source-tag="ext",Al Kass Sports 4
+http://www.elahmad.com/tv/m3u8/alkass.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Al Kass Sports 5" group-title="DEPORTES" source-tag="ext",Al Kass Sports 5
+http://www.elahmad.com/tv/m3u8/alkass.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Tateti" group-title="INFANTILES" source-tag="ext",Tateti
+http://unlimited1-cl.dps.live/tateti/tateti.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="Tacho Pistacho" group-title="INFANTILES" source-tag="ext",Tacho Pistacho
+https://rcnhd.cdn.net.co/live03/tacho_480p.m3u8
+#EXTINF:-1 tvg-name="Boing" group-title="INFANTILES" source-tag="Boing.it",Boing
+https://mdslivehlsb-i.akamaihd.net/hls/live/623616/boing/bitrate_4.m3u8
+#EXTINF:-1 tvg-name="Peque Radio" group-title="INFANTILES" source-tag="ext",Peque Radio
+http://panel2.cdnstreamserver.com/live/peque-pequetv.m3u8
+#EXTINF:-1 tvg-name="Trailer Tv Kids" group-title="INFANTILES" source-tag="ext",Trailer Tv Kids
+http://evo.eltelon.com:1935/trailertvkids/smil:trailertvkids.smil/chunklist_w194535224_b650000_sleng.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Tacho Pistacho" group-title="INFANTILES" source-tag="ext",Tacho Pistacho
+https://rcnhd.cdn.net.co/live03/tacho_480p.m3u8
+#EXTINF:-1 tvg-name="Boing" group-title="INFANTILES" source-tag="Boing.it",Boing
+https://mdslivehlsb-i.akamaihd.net/hls/live/623616/boing/bitrate_4.m3u8
+#EXTINF:-1 tvg-name="Garage TV" group-title="AUTOS" source-tag="GarageTV.es",Garage TV
+http://186.0.233.76:1935/Garage/garage.smil/chunklist_w846352619_b446000_sleng.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="FDF" group-title="ENTRETENIMIENTO" source-tag="FDF.sp",FDF
+https://mdslivehls-i.akamaihd.net/hls/live/571650/fdf/bitrate_4.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Divinity" group-title="ENTRETENIMIENTO" source-tag="Divinity.es",Divinity
+http://mdslivehls-i.akamaihd.net/hls/live/571648/divinity/bitrate_4.m3u8?xtreamiptv.m3u8
+#EXTINF:-1 tvg-name="Sevilla FC" group-title="ENTRETENIMIENTO" source-tag="ext",Sevilla FC
+http://sevillafc_live-lh.akamaihd.net/i/video_0index_0300_av-b.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Pinguino TV" group-title="ENTRETENIMIENTO" source-tag="ext",Pinguino TV
+http://streaming.elpinguino.com:1935/live/pinguinotv_360p/BratuMarian.m3u8
+#EXTINF:-1 tvg-name="Real Madrid TV" group-title="ENTRETENIMIENTO" source-tag="RealMadridTV.sp",Real Madrid TV
+http://rmtvlive-lh.akamaihd.net/i/rmtv_1index_1000_av-b.m3u8?sd=10&rebase=on
+#EXTINF:-1 tvg-name="OchoTV (Mexico)" group-title="ENTRETENIMIENTO" source-tag="ext",OchoTV (Mexico)
+http://bcliveuniv-lh.akamaihd.net/i/Live_1master.m3u8
+#EXTINF:-1 tvg-name="Multimedios (Mexico)" group-title="ENTRETENIMIENTO" source-tag="MultimediosMonterrey.mx",Multimedios (Mexico)
+http://mdstrm.com/live-stream-playlist_400/57b4dbf5dbbfc8f16bb63ce1.m3u8
+#EXTINF:-1 tvg-name="Canal Once (Mexico)" group-title="ENTRETENIMIENTO" source-tag="ext",Canal Once (Mexico)
+http://live.canaloncelive.tv:1935/livepkgr2/smil:internacional.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="ECUAVISA SD" group-title="ECUADOR" source-tag="ext",ECUAVISA SD
+http://elcanaldelfutbol.com/static/wowza/test/hls/20001/480p/playlist.m3u8
+#EXTINF:-1 tvg-name="ECUAVISA HD" group-title="ECUADOR" source-tag="ext",ECUAVISA HD
+http://elcanaldelfutbol.com/static/wowza/test/hls/20001/720p/playlist.m3u8
+#EXTINF:-1 tvg-name="Centro Ecuador" group-title="ECUADOR" source-tag="ext",Centro Ecuador
+https://ott.streann.com/loadbalancer/services/public/channels-secure/57cef28b2cdc6843385b86ce/playlist.m3u8
+#EXTINF:-1 tvg-name="Centro Ecuador" group-title="ECUADOR" source-tag="ext",Centro Ecuador
+http://unsecure.streann.com/loadbalancer/services/public/channels/57cef28b2cdc6843385b86ce/playlist.m3u8
+#EXTINF:-1 tvg-name="UCSG" group-title="ECUADOR" source-tag="ext",UCSG
+http://ecuastream.net:1935/UCSGHQ/UCSGHQ/playlist.m3u8
+#EXTINF:-1 tvg-name="TC" group-title="ECUADOR" source-tag="ext",TC
+http://elcanaldelfutbol.com/static/wowza/test/hls/10001/480p/playlist.m3u8
+#EXTINF:-1 tvg-name="TC HD" group-title="ECUADOR" source-tag="ext",TC HD
+http://elcanaldelfutbol.com/static/wowza/test/hls/10001/720p/playlist.m3u8
+#EXTINF:-1 tvg-name="HDFashion" group-title="ECUADOR" source-tag="hd-fashion",HDFashion
+http://95.67.47.115/hls/hdfashion_ua_hi/index.m3u8?_=1518069241
+#EXTINF:-1 tvg-name="Canal 13 TV" group-title="ESPAÑA" source-tag="ext",Canal 13 TV
+http://streaming.enetres.net/091DB7AFBD77442B9BA2F141DCC182F5021/mobile/playlist.m3u8
+#EXTINF:-1 tvg-name="ETB Sat" group-title="ESPAÑA" source-tag="ETBSat.es",ETB Sat
+http://etbvnogeo-lh.akamaihd.net/i/ETBEITBEUS_1index_0564_av-p.m3u8
+#EXTINF:-1 tvg-name="Divinity" group-title="Nacional" source-tag="Divinity.es",Divinity
+https://mdslivehls-i.akamaihd.net/hls/live/571648/divinity/bitrate_1.m3u8
+#EXTINF:-1 tvg-name="FDF" group-title="Nacional" source-tag="FDF.sp",FDF
+https://mdslivehls-i.akamaihd.net/hls/live/571650/fdf/bitrate_4.m3u8
+#EXTINF:-1 tvg-name="MILENIO TV" group-title="Nacional" source-tag="MilenioTV.mx",MILENIO TV
+http://bcoveliveios-i.akamaihd.net:80/hls/live/201661/57828478001/milenio_center_512k@51752.m3u8
+#EXTINF:-1 tvg-name="Ocho TV" group-title="Nacional" source-tag="ext",Ocho TV
+http://bcliveuniv-lh.akamaihd.net:80/i/Live_1index_2200_av-p.m3u8
+#EXTINF:-1 tvg-name="Teleceiba Canal 7" group-title="HONDURAS" source-tag="ext",Teleceiba Canal 7
+http://190.11.224.14:8134/liveevent.m3u8
+#EXTINF:-1 tvg-name="TEN 10" group-title="HONDURAS" source-tag="ext",TEN 10
+http://stream.grupoabchn.com:1935/TENHD/TENLive.smil/chunklist_w1445105875_b1248000.m3u8
+#EXTINF:-1 tvg-name="TSi" group-title="HONDURAS" source-tag="ext",TSi
+https://trinity-lh.akamaihd.net/i/TelevicentroLive1_dmaster.m3u8
+#EXTINF:-1 tvg-name="Canal 5" group-title="HONDURAS" source-tag="Canal5.mx",Canal 5
+https://trinity-lh.akamaihd.net/i/TelevicentroLive2_dmaster.m3u8
+#EXTINF:-1 tvg-name="HIT TV MUSIC" group-title="HONDURAS" source-tag="ext",HIT TV MUSIC
+http://kissfm-cires21-video.secure.footprint.net/hittv/bitrate_3.m3u8
+#EXTINF:-1 tvg-name="MTV (AZ)" group-title="HONDURAS" source-tag="ext",MTV (AZ)
+http://85.132.78.6:1935/live/muztv.stream/index.m3u8
+#EXTINF:-1 tvg-name="Music Choice Play" group-title="HONDURAS" source-tag="ext",Music Choice Play
+http://edge.music-choice-play-chaina1.top.comcast.net/PlayMetadataInserter/play/chunklist.m3u8
+#EXTINF:-1 tvg-name="TV3" group-title="HONDURAS" source-tag="TV3.ie",TV3
+http://ccma-tva-int-abertis-live.hls.adaptive.level3.net/int/ngrp:tv3_web/playlist.m3u8
+#EXTINF:-1 tvg-name="Super 3" group-title="HONDURAS" source-tag="ext",Super 3
+http://ccma-tva-int-cellnex-live-hls.secure.footprint.net/int/ngrp:c33_web/chunklist_b1296000.m3u8
+#EXTINF:-1 tvg-name="3/24" group-title="HONDURAS" source-tag="324.es",3/24
+http://ccma-tva-int-abertis-live.hls.adaptive.level3.net/int/ngrp:324_mobil/chunklist_b548000.m3u8
+#EXTINF:-1 tvg-name="Andorra TV (Andorra)" group-title="HONDURAS" source-tag="ext",Andorra TV (Andorra)
+http://194.158.80.31:443/live/rtva/playlist.m3u8
+#EXTINF:-1 tvg-name="Todo Deportes tv" group-title="HONDURAS" source-tag="ext",Todo Deportes tv
+http://rtmp.zafra.cloud:1935/securelive/tdcampeones20161/playlist.m3u8
+#EXTINF:-1 tvg-name="CHOLUSAT HONDURAS" group-title="HONDURAS" source-tag="ext",CHOLUSAT HONDURAS
+http://live.audiotvserver.com:1935/livemedia/cholusat/playlist.m3u8
+#EXTINF:-1 tvg-name="Si TV" group-title="HONDURAS" source-tag="ext",Si TV
+http://st2.worldkast.com/8030/8030/Sitv-Honduras.m3u8
+#EXTINF:-1 tvg-name="EBENEZER HD" group-title="HONDURAS" source-tag="ext",EBENEZER HD
+http://hds4.worldkast.com:1935/ebenezertv2/ebenezertv2/live.m3u8
+#EXTINF:-1 tvg-name="VICTORY CHANNEL" group-title="HONDURAS" source-tag="ext",VICTORY CHANNEL
+http://hls1.livestreamingcdn.com/livecdn780/myStream.sdp/playlist.m3u8
+#EXTINF:-1 tvg-name="Canal Once TV HD" group-title="HONDURAS" source-tag="ext",Canal Once TV HD
+http://live.canaloncelive.tv:1935/livepkgr2/smil:internacional.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="Canal Once STD" group-title="HONDURAS" source-tag="ext",Canal Once STD
+http://live.canaloncelive.tv:1935/livepkgr2/smil:internacional.smil/master.m3u8
+#EXTINF:-1 tvg-name="TRECEVISION YUCATAN" group-title="HONDURAS" source-tag="ext",TRECEVISION YUCATAN
+http://streamingcws20.com:1935/trecevision/videotrecevision/playlist.m3u8?
+#EXTINF:-1 tvg-name="MEXICO:15TV Sabinas | SD" group-title="HONDURAS" source-tag="ext",MEXICO:15TV Sabinas | SD
+http://live.gvstream.net:554/e-tv-video/play.stream/playlist.m3u8
+#EXTINF:-1 tvg-name="MEXICO:Ocho TV (Guadalajara) | FHD" group-title="HONDURAS" source-tag="ext",MEXICO:Ocho TV (Guadalajara) | FHD
+http://bcliveuniv-lh.akamaihd.net/i/Live_1master.m3u8
+#EXTINF:-1 tvg-name="CINE Y SERIES:Extrema TV" group-title="HONDURAS" source-tag="ext",CINE Y SERIES:Extrema TV
+http://livestreamcdn.net:1935/ExtremaTV/ExtremaTV/playlist.m3u8
+#EXTINF:-1 tvg-name="Canal 10 Chetumal" group-title="HONDURAS" source-tag="ext",Canal 10 Chetumal
+http://stream2.dynalias.com:1935/live/tvlive1/playlist.m3u8
+#EXTINF:-1 tvg-name="TV3 | SD" group-title="HONDURAS" source-tag="ext",TV3 | SD
+http://ccma-tva-int-abertis-live.hls.adaptive.level3.net/int/ngrp:tv3_web/playlist.m3u8
+#EXTINF:-1 tvg-name="324 Cataluña | SD" group-title="HONDURAS" source-tag="ext",324 Cataluña | SD
+http://ccma-tva-int-abertis-live.hls.adaptive.level3.net/int/ngrp:324_web/playlist.m3u8
+#EXTINF:-1 tvg-name="Telemicro Canal 5 OPCION HD RD" group-title="HONDURAS" source-tag="ext",Telemicro Canal 5 OPCION HD RD
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=LVDO0005&mode=12
+#EXTINF:-1 tvg-name="Digital 15 RD" group-title="HONDURAS" source-tag="ext",Digital 15 RD
+http://bit.ly/2CLgJ6u
+#EXTINF:-1 tvg-name="Digital 15 RD Opcion 2" group-title="HONDURAS" source-tag="ext",Digital 15 RD Opcion 2
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=LVDO0011&mode=12
+#EXTINF:-1 tvg-name="MEXICO:Capital 21 Mexico City" group-title="HONDURAS" source-tag="ext",MEXICO:Capital 21 Mexico City
+http://wowzaprod158-i.akamaihd.net/hls/live/595142/a9251b55/playlist.m3u8?set-akamai-hls-revision=5&set-cc-attribute=cc
+#EXTINF:-1 tvg-name="ENTRETENIMIENTO:Multimedios (Mexico)" group-title="HONDURAS" source-tag="ext",ENTRETENIMIENTO:Multimedios (Mexico)
+http://mdstrm.com/live-stream-playlist_400/57b4dbf5dbbfc8f16bb63ce1.m3u8
+#EXTINF:-1 tvg-name="MULTIMEDIOS MONTERREY HD" group-title="HONDURAS" source-tag="MultimediosMonterrey.mx",MULTIMEDIOS MONTERREY HD
+http://mdstrm.com/live-stream-playlist/57b4dbf5dbbfc8f16bb63ce1.m3u8
+#EXTINF:-1 tvg-name="Bolivia 2 FTA" group-title="HONDURAS" source-tag="ext",Bolivia 2 FTA
+http://streamer1.streamhost.org:1935/salive/GMIalfam/playlist.m3u8
+#EXTINF:-1 tvg-name="DOMINICANA:CANAL 5" group-title="HONDURAS" source-tag="ext",DOMINICANA:CANAL 5
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=LVDO0005&mode=12&iconimage=http://www.radiosargentina.com.ar/png/ESREPDOM.png
+#EXTINF:-1 tvg-name="ENTRETENIMIENTO:Telpin Teven (Argentina)" group-title="HONDURAS" source-tag="ext",ENTRETENIMIENTO:Telpin Teven (Argentina)
+http://201.219.100.30:1935/telpintv/ttv.stream_720p/playlist.m3u8
+#EXTINF:-1 tvg-name="Music Top (ARG)" group-title="HONDURAS" source-tag="ext",Music Top (ARG)
+http://live-edge01.telecentro.net.ar:1935/live/msctphd-720/playlist.m3u8
+#EXTINF:-1 tvg-name="ARGENTINA:Canal 26" group-title="HONDURAS" source-tag="ext",ARGENTINA:Canal 26
+http://200.115.193.177/live/26hd-720/.m3u8
+#EXTINF:-1 tvg-name="Canal 26 1" group-title="HONDURAS" source-tag="ext",Canal 26 1
+http://200.115.193.177/live/26hd-480/.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Canal 26 2" group-title="HONDURAS" source-tag="ext",Canal 26 2
+http://live-edge01.telecentro.net.ar/live/smil:c26.smil/chunklist_w188793591_b1864000_sleng.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Canal 26 3" group-title="HONDURAS" source-tag="ext",Canal 26 3
+http://live-edge01.telecentro.net.ar/live/smil:c26.smil/chunklist_w1700708876_b1264000_sleng.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Canal 2 Telpin Tv" group-title="HONDURAS" source-tag="ext",Canal 2 Telpin Tv
+http://wowza.telpin.com.ar:1935/telpintv/ttv.stream_720p/playlist.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="Nacional:Telemax" group-title="HONDURAS" source-tag="ext",Nacional:Telemax
+http://live-edge01.telecentro.net.ar/live/smil:tlx.smil/master.m3u8
+#EXTINF:-1 tvg-name="Nacional:Televisión Rionegrina" group-title="HONDURAS" source-tag="ext",Nacional:Televisión Rionegrina
+http://panel.dattalive.com:1935/8204/8204/playlist.m3u8
+#EXTINF:-1 tvg-name="Nacional:Canal 4 Posadas" group-title="HONDURAS" source-tag="ext",Nacional:Canal 4 Posadas
+http://184.154.28.210:1935/canal4/canal4/playlist.m3u8
+#EXTINF:-1 tvg-name="Nacional:Aire de Santa Fe" group-title="HONDURAS" source-tag="ext",Nacional:Aire de Santa Fe
+http://184.154.28.210:1935/airevideo/airevideo/playlist.m3u8
+#EXTINF:-1 tvg-name="UCSG" group-title="HONDURAS" source-tag="ext",UCSG
+http://ecuastream.net:1935/UCSGHQ/UCSGHQ/playlist.m3u8
+#EXTINF:-1 tvg-name="BHTV" group-title="HONDURAS" source-tag="BHTV1.rs",BHTV
+http://cdn1.ujjina.com:1935/iptvbhtv/livebhtvtv/.m3u8
+#EXTINF:-1 tvg-name="Capital TV" group-title="HONDURAS" source-tag="CapitalTV.uk",Capital TV
+http://streaming.video.webrpp-live.hls.adaptive.level3.net/hls-live/videoremux-videoCAPTV/_definst_/live.m3u8
+#EXTINF:-1 tvg-name="Congreso TV" group-title="HONDURAS" source-tag="ext",Congreso TV
+http://uvodscp-lh.akamaihd.net/i/exitosartmp_1master.m3u8
+#EXTINF:-1 tvg-name="CTC TV" group-title="HONDURAS" source-tag="ext",CTC TV
+http://livestreamingperu.com:1935/ctctv/ctctv/chunklist.m3u8
+#EXTINF:-1 tvg-name="Digital TV CH-1" group-title="HONDURAS" source-tag="ext",Digital TV CH-1
+http://uvodscp-lh.akamaihd.net/i/ped001rtmp_1index_1_av-p.m3u8?sd=10&rebase=on
+#EXTINF:-1 tvg-name="Locomotion TV" group-title="HONDURAS" source-tag="ext",Locomotion TV
+http://locomotiontv.com/envivo/loco_channel/stream.m3u8
+#EXTINF:-1 tvg-name="News 12 NJ" group-title="HONDURAS" source-tag="ext",News 12 NJ
+http://hls.iptv.optimum.net/news12/nipadlive/index_new.m3u8?callsign=N12NJ_CENTRAL
+#EXTINF:-1 tvg-name="News 12 Weather & Traffic" group-title="HONDURAS" source-tag="ext",News 12 Weather & Traffic
+http://hls.iptv.optimum.net/news12/nipadlive/index_new.m3u8?callsign=N12TW_NJ
+#EXTINF:-1 tvg-name="Panamericana 2nd Link" group-title="HONDURAS" source-tag="ext",Panamericana 2nd Link
+http://z3.reporteperuano.com:1935/liverp3/zrhn/master.m3u8
+#EXTINF:-1 tvg-name="RBC TV" group-title="HONDURAS" source-tag="rbk",RBC TV
+http://184.154.28.210:1935/rbc-tv/rbc-tv/playlist.m3u8
+#EXTINF:-1 tvg-name="SOL TV" group-title="HONDURAS" source-tag="ext",SOL TV
+http://wowzaserver.net:1935/vivo21/vivo21/playlist.m3u8
+#EXTINF:-1 tvg-name="Top Latino" group-title="HONDURAS" source-tag="ext",Top Latino
+http://online.radiodifusion.net:1935/livetv/latinoSD.stream/.m3u8
+#EXTINF:-1 tvg-name="TV Noticias" group-title="HONDURAS" source-tag="ext",TV Noticias
+http://cdnh4.iblups.com/hls/RMuwrdk7M9.m3u8
+#EXTINF:-1 tvg-name="ENTRETENIMIENTO:Telered (Costa Rica)" group-title="HONDURAS" source-tag="ext",ENTRETENIMIENTO:Telered (Costa Rica)
+http://k4.usastreams.com/Telesistemas/Telesistemas/playlist.m3u8
+#EXTINF:-1 tvg-name="Canal UCR" group-title="HONDURAS" source-tag="ext",Canal UCR
+http://163.178.170.181:1935/envivo/envivo/playlist.m3u8
+#EXTINF:-1 tvg-name="RCN Colombia" group-title="HONDURAS" source-tag="ext",RCN Colombia
+http://mdstrm.com:80/live-stream-playlist/58a36704896500b908cf1abe.m3u8
+#EXTINF:-1 tvg-name="ENTRETENIMIENTO:Digital TV (Peru)" group-title="HONDURAS" source-tag="ext",ENTRETENIMIENTO:Digital TV (Peru)
+http://uvodscp-lh.akamaihd.net:80/i/ped001rtmp_1master.m3u8
+#EXTINF:-1 tvg-name="ENTRETENIMIENTO:Capital TV (Peru)" group-title="HONDURAS" source-tag="ext",ENTRETENIMIENTO:Capital TV (Peru)
+http://streaming.video.webrpp-live.hls.adaptive.level3.net/hls-live/videoremux-videoCAPTV/_definst_/live/stream1.m3u8
+#EXTINF:-1 tvg-name="NOTICIAS:TV Noticias 7.3 (Peru)" group-title="HONDURAS" source-tag="ext",NOTICIAS:TV Noticias 7.3 (Peru)
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIPE0002&mode=12
+#EXTINF:-1 tvg-name="CANAL 9 teleritmo" group-title="HONDURAS" source-tag="ext",CANAL 9 teleritmo
+http://mdstrm.com/live-stream-playlist/57b4dc126338448314449d0c.m3u8
+#EXTINF:-1 tvg-name="Canal BHtv" group-title="HONDURAS" source-tag="ext",Canal BHtv
+http://cdn2.ujjina.com:1935/iptvbhtv/livebhtvtv/playlist.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="ENTRETENIMIENTO:Eco TV (Panama)" group-title="HONDURAS" source-tag="ext",ENTRETENIMIENTO:Eco TV (Panama)
+http://cdnlive.medcom.com.pa/medcom-livestream/eco-live/eco-live/streamout-480p/chunks.m3u8
+#EXTINF:-1 tvg-name="ENTRETENIMIENTO:TEN Canal 10 (Honduras)" group-title="HONDURAS" source-tag="ext",ENTRETENIMIENTO:TEN Canal 10 (Honduras)
+http://stream.grupoabchn.com:1935/TENHD/TENLive.smil/chunklist_w1445105875_b1848000.m3u8
+#EXTINF:-1 tvg-name="CANAL 6" group-title="HONDURAS" source-tag="ext",CANAL 6
+http://live-edge01.telecentro.net.ar/live/smil:tlx.smil/chunklist_w1527043435_b1828000_sleng.m3u8?iptvgratis?
+#EXTINF:-1 tvg-name="Top Latino" group-title="HONDURAS" source-tag="ext",Top Latino
+http://online.radiodifusion.net:1935/livetv/latinoSD.stream/chunklist_w430979689.m3u8
+#EXTINF:-1 tvg-name="TOP Latino TV www.premiumtv.org" group-title="HONDURAS" source-tag="ext",TOP Latino TV www.premiumtv.org
+http://173.236.60.186:1935/livetv/latinoSD.stream/playlist.m3u8
+#EXTINF:-1 tvg-name="MUSICA:Heart TV" group-title="HONDURAS" source-tag="ext",MUSICA:Heart TV
+http://ooyalahd2-f.akamaihd.net/i/globalradio02_deliveryindex_656_av-p.m3u8?JoCaRoIPTV.m3u8
+#EXTINF:-1 tvg-name="MUSICA:La Mega Mundial (EU)" group-title="HONDURAS" source-tag="ext",MUSICA:La Mega Mundial (EU)
+http://68.235.35.243:1935/lamegamundial/lamegamundial2/playlist.m3u8
+#EXTINF:-1 tvg-name="MUSICA:Music Top (Argentina)" group-title="HONDURAS" source-tag="ext",MUSICA:Music Top (Argentina)
+http://live-edge01.telecentro.net.ar/live/msctphd-720/playlist.m3u8
+#EXTINF:-1 tvg-name="MUSICA:Portal Foxmix (Chile)" group-title="HONDURAS" source-tag="ext",MUSICA:Portal Foxmix (Chile)
+http://tv.portalfoxmix.club:1935/portalfoxmix/portalfoxmix/playlist.m3u8
+#EXTINF:-1 tvg-name="MUSICA:Power HD (Argentina)" group-title="HONDURAS" source-tag="ext",MUSICA:Power HD (Argentina)
+http://wowza.telpin.com.ar:1935/live-powerTV/power.stream/playlist.m3u8
+#EXTINF:-1 tvg-name="MUSICA:Teleritmo (Mexico)" group-title="HONDURAS" source-tag="ext",MUSICA:Teleritmo (Mexico)
+http://d34z3o74zqnctr.cloudfront.net/live-stream/57b4dc126338448314449d0c/publish/media_1000.m3u8?dnt=true&ref=http%3A%2F%2Fwww.multimedios.com%2Ftv%2Fenvivo%2Fteleritmo&es=d34z3o74zqnctr.cloudfront.net&proto=http&time=1486351096793
+#EXTINF:-1 tvg-name="MUSICA:Urban 106.1 (Argentina)" group-title="HONDURAS" source-tag="ext",MUSICA:Urban 106.1 (Argentina)
+http://ar.solumedia.com.ar:1935/2/myStream/master.m3u8
+#EXTINF:-1 tvg-name="RTE News Now" group-title="HONDURAS" source-tag="RTENewsNow.ie",RTE News Now
+http://wmsrtsp1.rte.ie/live/android.sdp/playlist.m3u8
+#EXTINF:-1 tvg-name="Hit Music Channel" group-title="HONDURAS" source-tag="HitMusic.hu",Hit Music Channel
+http://1mstream.digicable.hu/hitmusic/hitmusic.m3u8
+#EXTINF:-1 tvg-name="TOP LATINO TV  s. y L" group-title="HONDURAS" source-tag="ext",TOP LATINO TV  s. y L
+http://online.radiodifusion.net:1935/livetv/latinoSD.stream/chunklist.m3u8
+#EXTINF:-1 tvg-name="MUSICA:PortalFoxMix Tv" group-title="HONDURAS" source-tag="ext",MUSICA:PortalFoxMix Tv
+http://149.56.17.92:1935/portalfoxmix/_definst_/portalfoxmix/chunklist_w1915378513.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="MUSICA:Teleritmo" group-title="HONDURAS" source-tag="ext",MUSICA:Teleritmo
+http://mdstrm.com/live-stream-playlist/57b4dc126338448314449d0c.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="MUSICA:Music Top Argentina" group-title="HONDURAS" source-tag="ext",MUSICA:Music Top Argentina
+http://live-edge01.telecentro.net.ar/live/smil:musictop.smil/playlist.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="MUSICA:Radio Italia Vision" group-title="HONDURAS" source-tag="ext",MUSICA:Radio Italia Vision
+http://livetr.teleromagna.it/lifestyle/live/playlist.m3u8
+#EXTINF:-1 tvg-name="MUSICA:California Music Channel" group-title="HONDURAS" source-tag="ext",MUSICA:California Music Channel
+http://cmctv.ios.internapcdn.net/cmctv_vitalstream_com/live_1/CMCUSA/CCURstream0.m3u8
+#EXTINF:-1 tvg-name="MUSICA:Dream Tv" group-title="HONDURAS" source-tag="ext",MUSICA:Dream Tv
+http://live.netd.com.tr/S1/HLS_LIVE/dreamtv/1000/prog_index.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="SUPER 5 TV COSTA RICA" group-title="HONDURAS" source-tag="ext",SUPER 5 TV COSTA RICA
+http://k4.usastreams.com/superC/superC_1/playlist.m3u8
+#EXTINF:-1 tvg-name="PYC TELEVISIÓN" group-title="HONDURAS" source-tag="ext",PYC TELEVISIÓN
+http://video.usatelk.com:1935/canal15/canal15/playlist.m3u8
+#EXTINF:-1 tvg-name="TELEVER" group-title="HONDURAS" source-tag="ext",TELEVER
+http://tengomusica.ddns.net:1935/telever/telever.sdp/playlist.m3u8
+#EXTINF:-1 tvg-name="A+" group-title="HONDURAS" source-tag="ext",A+
+http://aztecahls2-lh.akamaihd.net/i/aztecahls2_1index_3_av-p.m3u8
+#EXTINF:-1 tvg-name="ADN 40" group-title="HONDURAS" source-tag="ext",ADN 40
+http://aztecalive-lh.akamaihd.net/i/0kus659k5_1index_1_av-p.m3u8
+#EXTINF:-1 tvg-name="ADN 40" group-title="HONDURAS" source-tag="ext",ADN 40
+http://aztecalive-lh.akamaihd.net/i/0kus659k5_1index_3_av-p.m3u8?sd=10&rebase=on
+#EXTINF:-1 tvg-name="TV CAMPECHE" group-title="HONDURAS" source-tag="ext",TV CAMPECHE
+http://wms.tecnoxia.com:1935/8006/8006/playlist.m3u8
+#EXTINF:-1 tvg-name="MILENIO TV" group-title="HONDURAS" source-tag="MilenioTV.mx",MILENIO TV
+http://bcoveliveios-i.akamaihd.net/hls/live/201661/57828478001/milenio_center_512k@51752.m3u8
+#EXTINF:-1 tvg-name="MULTIMEDIOS MONTERREY" group-title="HONDURAS" source-tag="MultimediosMonterrey.mx",MULTIMEDIOS MONTERREY
+http://mdstrm.com/live-stream-playlist_400/57b4dbf5dbbfc8f16bb63ce1.m3u8?
+#EXTINF:-1 tvg-name="TV Más" group-title="HONDURAS" source-tag="ext",TV Más
+http://50.7.98.234:1935/rtv/videortv/chunklist.m3u8?tecnotv.info?iptv.m3u8?hermoso.m3u8?tecnotv.info?iptv.m3u8
+#EXTINF:-1 tvg-name="TOREON MEXICO" group-title="HONDURAS" source-tag="ext",TOREON MEXICO
+http://wowzacontrol.com:1935/stream34/stream34/playlist.m3u8
+#EXTINF:-1 tvg-name="TELEMAR CAMPECHE" group-title="HONDURAS" source-tag="ext",TELEMAR CAMPECHE
+http://wms.tecnoxia.com:1935/8006/8006/playlist.m3u
+#EXTINF:-1 tvg-name="TELEPIN HD" group-title="HONDURAS" source-tag="ext",TELEPIN HD
+http://201.219.100.30:1935/telpintv/ttv.stream_720p/playlist.m3u8?tecnotv.info?iptv.m3u8
+#EXTINF:-1 tvg-name="TC HD COLOMBIA" group-title="HONDURAS" source-tag="ext",TC HD COLOMBIA
+http://elcanaldelfutbol.com/static/wowza/test/hls/10001/720p/playlist.m3u8
+#EXTINF:-1 tvg-name="TC HD" group-title="HONDURAS" source-tag="ext",TC HD
+http://elcanaldelfutbol.com/static/wowza/test/hls/10001/480p/playlist.m3u8
+#EXTINF:-1 tvg-name="CILENCE TV" group-title="HONDURAS" source-tag="ext",CILENCE TV
+http://109.236.85.100:8081/sipTV/live/playlist.m3u8?www.tecnotv.info
+#EXTINF:-1 tvg-name="TRAVEL HD" group-title="HONDURAS" source-tag="travel",TRAVEL HD
+http://31.13.223.104:1935/travel/community.stream/playlist.m3u8
+#EXTINF:-1 tvg-name="RETRO MUCIC TV" group-title="HONDURAS" source-tag="ext",RETRO MUCIC TV
+http://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8
+#EXTINF:-1 tvg-name="RETRO MUSIC TV" group-title="HONDURAS" source-tag="RetroMusic.cz",RETRO MUSIC TV
+http://stream.mediawork.cz/retrotv/retrotvHQ1/chunklist_w1652320907.m3u8
+#EXTINF:-1 tvg-name="SON POPULAR" group-title="HONDURAS" source-tag="ext",SON POPULAR
+http://66.240.236.25/hls-live/livepkgr/_definst_/liveevent/popular.m3u8
+#EXTINF:-1 tvg-name="MODA:ID Fashion" group-title="HONDURAS" source-tag="ext",MODA:ID Fashion
+http://95.67.8.22/hls/idfashion/index.m3u8
+#EXTINF:-1 tvg-name="CULTURA:Silence TV" group-title="HONDURAS" source-tag="ext",CULTURA:Silence TV
+http://109.236.85.100:8081/sipTV/live/playlist.m3u8
+#EXTINF:-1 tvg-name="NOTICIAS:CGTN 1" group-title="HONDURAS" source-tag="ext",NOTICIAS:CGTN 1
+https://livees.cgtn.com/1000e/prog_index.m3u8
+#EXTINF:-1 tvg-name="LATINOS:Telemundo 62" group-title="HONDURAS" source-tag="ext",LATINOS:Telemundo 62
+http://wwsilive-lh.akamaihd.net/i/WWSI_LIVE1master.m3u8
+#EXTINF:-1 tvg-name="LATINOS:Super 5" group-title="HONDURAS" source-tag="ext",LATINOS:Super 5
+http://k4.usastreams.com/superC/superC_1/chunklist_w27246718.m3u8
+#EXTINF:-1 tvg-name="LATINOS:Ten SD" group-title="HONDURAS" source-tag="ext",LATINOS:Ten SD
+http://stream.grupoabchn.com:1935/TENHD/TENLive.smil/chunklist_w1445105875_b1248000.m3u8
+#EXTINF:-1 tvg-name="CHILE:Tv Senado 1 HD" group-title="HONDURAS" source-tag="ext",CHILE:Tv Senado 1 HD
+http://janus-tv-ply.senado.cl/playlist/stream.m3u8?s=tvsenado-hd
+#EXTINF:-1 tvg-name="CHILE:Tv Senado 2 SD" group-title="HONDURAS" source-tag="ext",CHILE:Tv Senado 2 SD
+http://janus-tv-ply.senado.cl/playlist/stream.m3u8?s=tvsenado-sd
+#EXTINF:-1 tvg-name="ARGENTINA:TLX" group-title="HONDURAS" source-tag="ext",ARGENTINA:TLX
+http://live-edge01.telecentro.net.ar/live/smil:tlx.smil/chunklist_w1527043435_b1828000_sleng.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="ARGENTINA:Canal Provincial" group-title="HONDURAS" source-tag="ext",ARGENTINA:Canal Provincial
+http://www.trimi.com.ar/provincial/streaming/mystream.m3u8
+#EXTINF:-1 tvg-name="COLOMBIA:Canal Capital HD" group-title="HONDURAS" source-tag="ext",COLOMBIA:Canal Capital HD
+https://mdstrm.com/live-stream-playlist/57d01d6c28b263eb73b59a5a.m3u8
+#EXTINF:-1 tvg-name="PERU:Canal Capital" group-title="HONDURAS" source-tag="ext",PERU:Canal Capital
+http://streaming.video.webrpp-live.hls.adaptive.level3.net/hls-live/videoremux-videoCAPTV/_definst_/live.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="PARAGUAY:Telefuturo" group-title="HONDURAS" source-tag="ext",PARAGUAY:Telefuturo
+http://201.217.3.212/telefuturoext/telefuturoext/playlist.m3u8
+#EXTINF:-1 tvg-name="-MEXICO-" group-title="HONDURAS" source-tag="ext",-MEXICO-
+http://aztecalive-lh.akamaihd.net/i/0kus659k5_1index_3_av-b.m3u8?sd=10&rebase=on
+#EXTINF:-1 tvg-name="MEXICO:Multimedios Monterrey" group-title="HONDURAS" source-tag="ext",MEXICO:Multimedios Monterrey
+http://mdstrm.com/live-stream-playlist/57b4dbf5dbbfc8f16bb63ce1.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="MEXICO:Multimedios" group-title="HONDURAS" source-tag="ext",MEXICO:Multimedios
+http://mdstrm.com/live-stream-playlist/57bf686a61ff39e1085d43e1.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="MEXICO:Multimedios" group-title="HONDURAS" source-tag="ext",MEXICO:Multimedios
+http://mdstrm.com/live-stream-playlist/57b4db886338448314449cfa.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="MEXICO:TV Mas" group-title="HONDURAS" source-tag="ext",MEXICO:TV Mas
+http://50.7.98.234:1935/rtv/videortv/chunklist.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="MEXICO:Tlaxcala Television" group-title="HONDURAS" source-tag="ext",MEXICO:Tlaxcala Television
+http://coracyt.mega00.com:1935/live/coracyt/coracyt/playlist.m3u8
+#EXTINF:-1 tvg-name="MUSICA:Top Latino" group-title="HONDURAS" source-tag="ext",MUSICA:Top Latino
+http://online.radiodifusion.net:1935/livetv/latinoSD.stream/chunklist_w1282322208.m3u8
+#EXTINF:-1 tvg-name="MUSICA:M2o Tv" group-title="HONDURAS" source-tag="ext",MUSICA:M2o Tv
+http://m2otv-lh.akamaihd.net/i/m2oTv_1index_600_av-b.m3u8?iptvgratis?chile.m3u8
+#EXTINF:-1 tvg-name="MUSICA:MC Music Choice" group-title="HONDURAS" source-tag="ext",MUSICA:MC Music Choice
+http://edge.music-choice-play-chaina1.top.comcast.net/PlayMetadataInserter/play/chunklist.m3u8
+#EXTINF:-1 tvg-name="MUSICA:Xite" group-title="HONDURAS" source-tag="ext",MUSICA:Xite
+http://highvolume03.streampartner.nl/vleugels_hd6/livestream/chunklist.m3u8
+#EXTINF:-1 tvg-name="MUSICA:CHAU Tv" group-title="HONDURAS" source-tag="ext",MUSICA:CHAU Tv
+http://video.chaula.tv/hls/live/high/playlist_high.m3u8
+#EXTINF:-1 tvg-name="MUSICA:FS1" group-title="HONDURAS" source-tag="ext",MUSICA:FS1
+http://stream.fs1.tv:8080/hls/webstream.m3u8
+#EXTINF:-1 tvg-name="LOGOS TV" group-title="HONDURAS" source-tag="ext",LOGOS TV
+http://streamer1.streamhost.org:1935/salive/GMIalfah/livestream.m3u8
+#EXTINF:-1 tvg-name="SEVILLA TV" group-title="HONDURAS" source-tag="ext",SEVILLA TV
+http://sevillafc_live-lh.akamaihd.net/i/video_0master.m3u8
+#EXTINF:-1 tvg-name="M2OTV" group-title="HONDURAS" source-tag="ext",M2OTV
+http://m2otv-lh.akamaihd.net/i/m2oTv_1index_600_av-b.m3u8?sd=10&rebase=on
+#EXTINF:-1 tvg-name="CANAL 10 CHIAPAS" group-title="HONDURAS" source-tag="ext",CANAL 10 CHIAPAS
+http://klive-a.akamaihd.net/dc-0/live/hls/p/290412/e/0_es0kdjdz/sd/10000/t/bj1DqoE8O0tNhHgd6BvqXQ/index-s32.m3u8
+#EXTINF:-1 tvg-name="MULTIMEDIOS" group-title="HONDURAS" source-tag="MultimediosMonterrey.mx",MULTIMEDIOS
+http://mdstrm.com/live-stream-playlist/57b4dbf5dbbfc8f16bb63ce1.m3u8?CeceGeek.m3u8
+#EXTINF:-1 tvg-name="MLB TV" group-title="HONDURAS" source-tag="ext",MLB TV
+http://mlblive-akc.mlb.com/ls01/mlbam/mlb_network/NETWORK_LINEAR_1/MLB_VIDEO_MLBN_FAUX_LINEAR_STREAM_1_MLB_Network_Linear_Stream_Tuesday_20170704_1499230681478/2400K/2400_slide.m3u8
+#EXTINF:-1 tvg-name="group-title=Canales Italianos Sky TG24 | SD" group-title="Canales Italianos" source-tag="ext",group-title=Canales Italianos Sky TG24 | SD
+http://skyianywhere2-i.akamaihd.net:80/hls/live/200275/tg24/stream6/streamPlaylist.m3u8
+#EXTINF:-1 tvg-name="telenord 8" group-title="Canales Italianos" source-tag="ext",telenord 8
+http://newyorkstreamss2.ddns.net:28987/telenord8/telenord8/chunklist_w588013183.m3u8
+#EXTINF:-1 tvg-name="BLOOMBERG" group-title="Canales Italianos" source-tag="Bloomberg.cl",BLOOMBERG
+http://cdn-videos.akamaized.net/btv/desktop/akamai/europe/live/primary.m3u8
+#EXTINF:-1 tvg-name="telemundo" group-title="Canales Italianos" source-tag="Telemundo.mx",telemundo
+http://freevectorlogo.net/wp-content/uploads/2011/06/telemundo-logo-vector-200x200.png"
+#EXTINF:-1 tvg-name="Telenord Canal 8" group-title="Canales Italianos" source-tag="ext",Telenord Canal 8
+http://www.radiosargentina.com.ar/php/tvm3u.php?id=DIDO0026&mode=12
+#EXTINF:-1 tvg-name="TELERITMO" group-title="Canales Italianos" source-tag="ext",TELERITMO
+http://mdstrm.com/live-stream-playlist/57b4dc126338448314449d0c.m3u8?tecnotv.info?.m3u
+#EXTINF:-1 tvg-name="TELERITMO" group-title="Canales Italianos" source-tag="ext",TELERITMO
+http://mdstrm.com/live-stream-playlist_400/57b4dc126338448314449d0c.m3u8?
+#EXTINF:-1 tvg-name="TeleSafor" group-title="Canales Italianos" source-tag="ext",TeleSafor
+http://video.telesafor.com/hls/video_low.m3u8
+#EXTINF:-1 tvg-name="TeleSafor | HD" group-title="Canales Italianos" source-tag="ext",TeleSafor | HD
+http://video.telesafor.com/hls/video_high.m3u8
+#EXTINF:-1 tvg-name="TeleValencia" group-title="Canales Italianos" source-tag="ext",TeleValencia
+http://streaming.enetres.net/9E9557EFCEBB43A89CEC8FBD3C500247022/live.smil/.m3u8
+#EXTINF:-1 tvg-name="Teve2" group-title="Canales Italianos" source-tag="Tv2.tr",Teve2
+http://media.netd.com.tr/S2/HLS_LIVE/tv2/playlist.m3u8
+#EXTINF:-1 tvg-name="TG4" group-title="Canales Italianos" source-tag="TG4.ie",TG4
+http://csm-e.cds1.yospace.com/csm/live/74246610.m3u8
+#EXTINF:-1 tvg-name="TGRT Belgesel" group-title="Canales Italianos" source-tag="TGRTHaber.tr",TGRT Belgesel
+http://cdn1.streamencoding.com:1935/tgrt_belgesel/amlst:live-30/playlist.m3u8
+#EXTINF:-1 tvg-name="The Blaze" group-title="Canales Italianos" source-tag="ext",The Blaze
+http://theblaze.global.ssl.fastly.net/live/blaze-dvr/master.m3u8
+#EXTINF:-1 tvg-name="The Country Network" group-title="Canales Italianos" source-tag="ext",The Country Network
+https://dcunilive2-lh.akamaihd.net/i/dclive_1master.m3u8
+#EXTINF:-1 tvg-name="The Film Zone" group-title="Canales Italianos" source-tag="TheFilmZone.ar",The Film Zone
+http://freeiptv.apisecurers.com/canal_79_thefilmzone.m3u8
+#EXTINF:-1 tvg-name="The Travel Channel" group-title="Canales Italianos" source-tag="ext",The Travel Channel
+http://pili-live-hls.livelvy.sobeycache.com/livelvy/lvy1.m3u8
+#EXTINF:-1 tvg-name="Three" group-title="Canales Italianos" source-tag="ext",Three
+http://mediaworks-i.akamaihd.net/hls/live/220435/3812193411001/3news_live/master.m3u8
+#EXTINF:-1 tvg-name="Tisza TV" group-title="Canales Italianos" source-tag="ext",Tisza TV
+http://www.tiszatv.hu:443/tiszatv.f4v
+#EXTINF:-1 tvg-name="Tivikom Ulan-Udje" group-title="Canales Italianos" source-tag="ext",Tivikom Ulan-Udje
+http://tvcom.stream.intelema.ru/tvcom/studio/index.m3u8
+#EXTINF:-1 tvg-name="TJK TV" group-title="Canales Italianos" source-tag="TJKTV.tr",TJK TV
+http://tjktv.ercdn.net/tjktv_576p.m3u8
+#EXTINF:-1 tvg-name="TLX" group-title="Canales Italianos" source-tag="ext",TLX
+http://live-edge01.telecentro.net.ar/live/smil:tlx.smil/chunklist_w1527043435_b1828000_sleng.m3u8?
+#EXTINF:-1 tvg-name="TopShop" group-title="Canales Italianos" source-tag="tdk",TopShop
+http://tv-topshop.netrack.ru/hls/topshop.m3u8
+#EXTINF:-1 tvg-name="Trentino TV (Opt-1)" group-title="Canales Italianos" source-tag="ext",Trentino TV (Opt-1)
+http://77.72.196.214:8554/live/TrentinoTV/livestream.m3u8
+#EXTINF:-1 tvg-name="TRO Soyuz" group-title="Canales Italianos" source-tag="ext",TRO Soyuz
+http://live2.mediacdn.ru/sr1/tro/playlist.m3u8
+#EXTINF:-1 tvg-name="ATVHD" group-title="Canales Italianos" source-tag="ATV.tr",ATVHD
+http://85.132.81.184:8080/atv/index.m3u8
+#EXTINF:-1 tvg-name="Sky" group-title="Canales Italianos" source-tag="Sky.br",Sky
+http://skydvn-nowtv-atv-prod.skydvn.com/atv/skynews/1404/live/07.m3u8
+#EXTINF:-1 tvg-name="Az Clic" group-title="Canales Italianos" source-tag="AzClic.mx",Az Clic
+http://iptv.premiumtutv.com/canal_116_azclick.m3u8
+#EXTINF:-1 tvg-name="RCG TV2" group-title="Canales Italianos" source-tag="ext",RCG TV2
+http://wowzacontrol.com:1936/stream23/stream23/playlist.m3u8
+#EXTINF:-1 tvg-name="Multimedios Laguna" group-title="Canales Italianos" source-tag="ext",Multimedios Laguna
+http://mdstrm.com/live-stream-playlist_1200/57bf686a61ff39e1085d43e1.m3u8?
